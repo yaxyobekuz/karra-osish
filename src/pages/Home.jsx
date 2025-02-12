@@ -21,10 +21,15 @@ import megaphoneImg from "../assets/images/others/megaphone.png";
 import expansionIcon from "../assets/images/icons/expansion.svg";
 import arrowRightImg from "../assets/images/icons/arrow-right.svg";
 import sherzodTursunovImg from "../assets/images/others/sherzod-tursunov.png";
+import bekzodKomilovaBg from "../assets/images/backgrounds/bekzod-komilov.jpg";
+import shirinKomilovaBg from "../assets/images/backgrounds/shirin-komilova.jpg";
+import barnoTursunovaBg from "../assets/images/backgrounds/barno-tursunova.jpg";
+import sherzodTursunovBg from "../assets/images/backgrounds/sherzod-tursunov.jpg";
 
 const Home = () => {
   return (
     <>
+      {/* Features */}
       <section className="bg-primary py-20">
         <div className="container">
           {/* Top */}
@@ -203,6 +208,87 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Owners */}
+      <section className="py-20">
+        <div className="container !max-w-6xl">
+          {/* Top */}
+          <div className="flex justify-center w-full mb-12">
+            <div className="space-y-3.5 text-center">
+              {/* Section title */}
+              <h2 className="text-3xl font-bold">Asoschilar</h2>
+
+              {/* Section description */}
+              <p className="max-w-xl text-lg">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+
+          {/* Main contents */}
+          <ul className="grid grid-cols-1 gap-5 md:grid-cols-4">
+            {/* 1 */}
+            <li
+              style={{ background: `url(${sherzodTursunovBg})` }}
+              className="flex items-end relative overflow-hidden !bg-cover !bg-no-repeat rounded-3xl p-8 row-span-2 col-span-2"
+            >
+              <h3 className="z-10 text-3xl font-medium text-white">
+                <span>Sherzod</span>
+                <br />
+                <span>Tursunov</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+
+            {/* 2 */}
+            <li
+              style={{ background: `url(${barnoTursunovaBg})` }}
+              className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl col-span-2"
+            >
+              <h3 className="z-10 text-2xl font-medium">
+                <span>Barno</span>
+                <br />
+                <span>Tursunova</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white/70" />
+            </li>
+
+            {/* 3 */}
+            <li
+              style={{ background: `url(${bekzodKomilovaBg})` }}
+              className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
+            >
+              <h3 className="z-10 text-xl font-medium text-white">
+                <span>Bekzod</span>
+                <br />
+                <span>Komilov</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+
+            {/* 4 */}
+            <li
+              style={{ background: `url(${shirinKomilovaBg})` }}
+              className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
+            >
+              <h3 className="z-10 text-xl font-medium text-white">
+                <span>Shirin</span>
+                <br />
+                <span>Komilova</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* About format of course */}
       <section id="about" className="py-20">
         <div className="container">
@@ -319,16 +405,16 @@ const Home = () => {
       </section>
 
       {/* Purposes */}
-      <section className="bg-primary py-20">
-        <div className="container">
+      <section className="bg-white py-20">
+        <div className="container !max-w-6xl">
           {/* Top */}
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 className="text-3xl font-bold text-white">Maqsadlar</h2>
+              <h2 className="text-3xl font-bold">Maqsadlar</h2>
 
               {/* Section description */}
-              <p className="text-lg text-white">
+              <p className="text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
