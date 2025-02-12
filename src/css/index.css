@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base --- */
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gray-light text-base text-dark font-normal font-Manrope;
+  }
+}
+
+/* --- Components --- */
+
+@layer components {
+  .btn-primary {
+    @apply flex items-center justify-center bg-primary px-5 py-2.5 rounded-full text-white;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center bg-white px-5 py-2.5 rounded-full border;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    @apply hidden size-0;
+  }
+}
+
+/* --- Utilities --- */
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl w-full px-5 mx-auto;
+  }
+}
+
+/* Swiper */
+.gallery-swiper .swiper-slide {
+  scale: 0.8;
+  border-radius: 12px;
+  filter: brightness(0.5);
+  transition: scale 500ms ease-in-out, filter 300ms ease-in-out, border-radius 500ms ease-in-out;
+}
+
+.gallery-swiper .swiper-slide-active {
+  scale: 1;
+  filter: brightness(1);
+  border-radius: 18px;
+}
