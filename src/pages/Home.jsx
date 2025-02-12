@@ -39,8 +39,8 @@ const Home = () => {
             <div className="space-y-3.5 text-center">
               {/* Section title */}
               <h2
+                className="text-white"
                 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
-                className="text-3xl font-bold text-white"
               >
                 Dastur kimlar uchun?
               </h2>
@@ -93,10 +93,7 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2
-                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
-                className="text-3xl font-bold"
-              >
+              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
                 Asoschilar
               </h2>
 
@@ -186,10 +183,7 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2
-                className="text-3xl font-bold"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
-              >
+              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
                 Kurs formati haqida
               </h2>
 
@@ -310,8 +304,8 @@ const Home = () => {
         <div className="container">
           {/* Title */}
           <h2
+            className="text-center mb-12"
             ref={animate({ y: 50, scale: 0.9 })}
-            className="text-3xl font-bold text-center mb-12"
           >
             Kurs davomida quyidagi ma'lumotlarga ega bo'lasiz
           </h2>
@@ -327,12 +321,7 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2
-                className="text-3xl font-bold"
-                ref={animate({ y: 50, scale: 0.9 })}
-              >
-                Maqsadlar
-              </h2>
+              <h2 ref={animate({ y: 50, scale: 0.9 })}>Maqsadlar</h2>
 
               {/* Section description */}
               <p
@@ -406,7 +395,7 @@ const Home = () => {
           {/* Title */}
           <h2
             ref={animate({ y: 50, scale: 0.9 })}
-            className="text-3xl font-bold text-primary text-center mb-12"
+            className="text-primary text-center mb-12"
           >
             Asosiy modullar
           </h2>
@@ -420,10 +409,7 @@ const Home = () => {
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2
-              ref={animate({ x: -50, scale: 0.9 })}
-              className="text-3xl font-bold text-center"
-            >
+            <h2 ref={animate({ x: -50, scale: 0.9 })} className="text-center">
               Fotogalareya
             </h2>
 
@@ -466,10 +452,7 @@ const Home = () => {
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2
-              ref={animate({ x: -50, scale: 0.9 })}
-              className="text-3xl font-bold text-center"
-            >
+            <h2 className="text-center" ref={animate({ x: -50, scale: 0.9 })}>
               Sharxlar
             </h2>
 

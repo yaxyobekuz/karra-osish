@@ -1,9 +1,11 @@
-import cupImg from "../assets/images/others/cup.png";
+import bullBg from "../assets/images/backgrounds/bull.jpg";
+import meetingBg from "../assets/images/backgrounds/meeting.webp";
+import advantageBg from "../assets/images/backgrounds/advantage.jpg";
 
 export default [
   {
     title: "Tizimli ravishda raqobatchilardan ustunlikka erishish.",
-    bg: "url(https://w0.peakpx.com/wallpaper/658/542/HD-wallpaper-businesses-take-advantage-of-real-time-cyber-intelligence-partner-content.jpg)",
+    bg: `url(${advantageBg})`,
     color: "white",
   },
   {
@@ -15,9 +17,9 @@ export default [
   {
     title:
       "Qanday qilib jamoani samarali boshqarish va eng kuchli jamoani yig'ish.",
-      bg: "url(https://www.gmevents.ae/wp-content/uploads/2019/04/228109899-business-meeting-wallpaper.jpg)",
-      color: "white",
-    },
+    bg: `url(${meetingBg})`,
+    color: "white",
+  },
   {
     title:
       "O'zingiz uchun shaxsiy vaqt ajratish va operatsion tizimdan chiqish.",
@@ -26,7 +28,7 @@ export default [
   },
   {
     title: "O'sish nuqtasini topib, sof foydani oshirish.",
-    bg: "url(https://t4.ftcdn.net/jpg/01/34/25/15/360_F_134251559_Kiq7uliJiXSFUZAM6upX7rdJWL5Z52jF.jpg)",
+    bg: `url(${bullBg})`,
     color: "white",
   },
   {

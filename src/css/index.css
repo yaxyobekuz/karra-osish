@@ -14,6 +14,10 @@
   body {
     @apply overflow-x-hidden bg-gray-light text-base text-dark font-normal font-Manrope;
   }
+
+  h2 {
+    @apply text-4xl font-bold;
+  }
 }
 
 /* --- Components --- */
@@ -45,7 +49,8 @@
   scale: 0.8;
   border-radius: 12px;
   filter: brightness(0.5);
-  transition: scale 500ms ease-in-out, filter 300ms ease-in-out, border-radius 500ms ease-in-out;
+  transition: scale 500ms ease-in-out, filter 300ms ease-in-out,
+    border-radius 500ms ease-in-out;
 }
 
 .gallery-swiper .swiper-slide-active {

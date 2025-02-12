@@ -15,7 +15,10 @@ const Purposes = () => {
       {purposes.map(({ title, bg, color }, index) => (
         <li
           key={index}
-          style={{ background: bg, color }}
+          style={{
+            background: `${bg}${bg.startsWith("url") ? ", #292a31" : ""}`,
+            color,
+          }}
           ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
           className="flex flex-col justify-between gap-5 relative overflow-hidden min-h-52 !bg-cover !bg-no-repeat p-8 rounded-3xl"
         >
