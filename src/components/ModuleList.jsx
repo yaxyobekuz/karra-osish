@@ -1,9 +1,5 @@
-import { useEffect, useRef } from "react";
-
-// Gsap
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// Animation
+import useGsap from "../hooks/useGsap";
 
 // Data
 import modules from "../data/modules";
@@ -12,29 +8,13 @@ import modules from "../data/modules";
 import successIcon from "../assets/images/icons/success.svg";
 
 const ModulesList = () => {
-  const listRef = useRef([]);
-
-  useEffect(() => {
-    listRef.current.forEach((item) => {
-      gsap.from(item, {
-        opacity: 0,
-        y: 100,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    });
-  }, []);
+  const animate = useGsap();
 
   return (
     <ol className="space-y-5">
       {modules.map((module, index) => (
         <li
-          ref={(el) => (listRef.current[index] = el)}
+          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
           className="bg-white space-y-6 p-8 rounded-3xl"
           key={module.id}
         >

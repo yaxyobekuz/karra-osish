@@ -1,7 +1,8 @@
 import React from "react";
-
-// Router
 import { Outlet } from "react-router-dom";
+
+// Animation
+import useGsap from "../hooks/useGsap";
 
 // Components
 import Header from "../components/Header";
@@ -19,6 +20,8 @@ import statsBg from "../assets/images/backgrounds/stats.jpg";
 import topRightArrowIcon from "../assets/images/icons/top-right-arrow.svg";
 
 const MainLayout = () => {
+  const animate = useGsap();
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* header */}
@@ -30,31 +33,49 @@ const MainLayout = () => {
         <div className="pt-20 pb-5 bg-red-5">
           <div className="container relative">
             {/* Title */}
-            <h1 className="mb-5 text-center font-extrabold leading-relaxed text-[44px]">
+            <h1
+              ref={animate({ y: 50, scale: 0.9 })}
+              className="mb-5 text-center font-extrabold leading-relaxed text-[44px]"
+            >
               Tadbirkorlar uchun biznesni kengaytirish <br /> va
               <span className="text-primary"> daromadni oshirish </span>
               dasturi
             </h1>
 
             {/* Description */}
-            <p className="mb-8 text-[17px] text-center">
+            <p
+              ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              className="mb-8 text-[17px] text-center"
+            >
               Biznesni yuksaltirish uchun kerakli dastur. Biz bilan
               biznesingizni rivojlantiring.
             </p>
 
             {/* Buttons */}
-            <div className="flex items-center justify-center gap-5 w-full">
-              <a href="#" className="btn-primary w-40">
+            <div
+              ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
+              className="flex items-center justify-center gap-5 w-full"
+            >
+              <a
+                ref={animate({ x: -50 })}
+                href="#"
+                className="btn-primary w-40"
+              >
                 Qabulga yozilish
               </a>
 
-              <a href="#" className="btn-secondary w-40">
+              <a
+                ref={animate({ x: 50 })}
+                href="#"
+                className="btn-secondary w-40"
+              >
                 Video lavha
               </a>
             </div>
 
             {/* Left Icons */}
             <img
+              ref={animate({ scale: 0.5, y: 50, delay: 0.1 })}
               width={48}
               height={48}
               src={topRightArrowIcon}
@@ -63,6 +84,7 @@ const MainLayout = () => {
             />
 
             <img
+              ref={animate({ scale: 0.5, y: 50, delay: 0.2 })}
               width={56}
               height={56}
               src={magicIcon}
@@ -71,6 +93,7 @@ const MainLayout = () => {
             />
 
             <img
+              ref={animate({ scale: 0.5, y: 50, delay: 0.3 })}
               width={40}
               height={40}
               src={docIcon}
@@ -80,6 +103,7 @@ const MainLayout = () => {
 
             {/* Right Icons */}
             <img
+              ref={animate({ scale: 0.5, y: 50, delay: 0.5 })}
               width={48}
               height={48}
               src={statsIcon}
@@ -88,6 +112,7 @@ const MainLayout = () => {
             />
 
             <img
+              ref={animate({ scale: 0.5, y: 50, delay: 0.6 })}
               width={48}
               height={48}
               src={flowIcon}
@@ -102,7 +127,10 @@ const MainLayout = () => {
           <div className="container relative">
             <div className="flex items-end justify-between gap-5">
               {/* 1 */}
-              <div className="max-w-[226px] w-full h-96 rounded-3xl overflow-hidden">
+              <div
+                ref={animate({ scale: 0.9, y: 50, delay: 0.1 })}
+                className="max-w-[226px] w-full h-96 rounded-3xl overflow-hidden"
+              >
                 <img
                   width={226}
                   height={384}
@@ -113,16 +141,24 @@ const MainLayout = () => {
               </div>
 
               {/* 2 */}
-              <div className="flex flex-col items-center justify-center gap-5 w-full h-72 bg-dark rounded-3xl">
-                <b className="text-4xl text-white font-semibold">50+</b>
+              <div
+                className="flex items-end w-full h-96"
+                ref={animate({ scale: 0.9, y: 50, delay: 0.2 })}
+              >
+                <div className="flex flex-col items-center justify-center gap-5 w-full h-72 bg-dark rounded-3xl">
+                  <b className="text-4xl text-white font-semibold">50+</b>
 
-                <p className="max-w-36 text-xl text-center text-white">
-                  Hurmatli mijoz va hamkorlar bilan ishlaymiz
-                </p>
+                  <p className="max-w-36 text-xl text-center text-white">
+                    Hurmatli mijoz va hamkorlar bilan ishlaymiz
+                  </p>
+                </div>
               </div>
 
               {/* 3 */}
-              <div className="flex flex-col justify-between shrink-0 w-64 h-96">
+              <div
+                ref={animate({ scale: 0.9, y: 50, delay: 0.3 })}
+                className="flex flex-col justify-between shrink-0 w-64 h-96"
+              >
                 {/* Rating */}
                 <div className="flex flex-col gap-3.5 items-center justify-center">
                   <div className="flex items-center justify-center gap-3.5">
@@ -135,10 +171,16 @@ const MainLayout = () => {
                           src={starIcon}
                           alt="Star icon"
                           className="size-5"
+                          ref={animate({ x: -50, delay: 0.1 * (index + 1) })}
                         />
                       ))}
                     </div>
-                    <span className="text-[17px] font-medium">4.9</span>
+                    <span
+                      ref={animate({ x: -50, delay: 0.6 })}
+                      className="text-[17px] font-medium"
+                    >
+                      4.9
+                    </span>
                   </div>
 
                   <a
@@ -150,7 +192,10 @@ const MainLayout = () => {
                 </div>
 
                 {/* Bottom */}
-                <div className="w-full h-52 bg-white space-y-3.5 p-8 rounded-3xl">
+                <div
+                  ref={animate({ y: -50 })}
+                  className="w-full h-52 bg-white space-y-3.5 p-8 rounded-3xl"
+                >
                   <span className="inline-block bg-primary/20 p-1.5 rounded-lg">
                     <img
                       width={24}
@@ -170,16 +215,24 @@ const MainLayout = () => {
               </div>
 
               {/* 4 */}
-              <div className="flex flex-col items-center justify-center gap-5 w-full h-72 bg-[#E2FFC8] rounded-3xl">
-                <b className="text-4xl font-semibold">30+</b>
+              <div
+                ref={animate({ scale: 0.9, y: 50, delay: 0.4 })}
+                className="flex items-end w-full h-96"
+              >
+                <div className="flex flex-col items-center justify-center gap-5 w-full h-72 bg-[#E2FFC8] rounded-3xl">
+                  <b className="text-4xl font-semibold">30+</b>
 
-                <p className="max-w-36 text-xl text-center">
-                  Yillik tajribaga ega bo'lgan mutaxasislar
-                </p>
+                  <p className="max-w-36 text-xl text-center">
+                    Yillik tajribaga ega bo'lgan mutaxasislar
+                  </p>
+                </div>
               </div>
 
               {/* 5 */}
-              <div className="flex flex-col items-start justify-end gap-5 max-w-[226px] w-full h-96 bg-primary p-8 rounded-3xl">
+              <div
+                ref={animate({ scale: 0.9, y: 50, delay: 0.5 })}
+                className="flex flex-col items-start justify-end gap-5 max-w-[226px] w-full h-96 bg-primary p-8 rounded-3xl"
+              >
                 <img
                   width={48}
                   height={48}

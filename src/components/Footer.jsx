@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Animation
+import useGsap from "../hooks/useGsap";
+
 // Images
 import logoIcon from "../assets/images/icons/logo.svg";
 import facebookIcon from "../assets/images/icons/facebook.svg";
@@ -8,12 +11,18 @@ import telegramIcon from "../assets/images/icons/telegram.svg";
 import instagramIcon from "../assets/images/icons/instagram.svg";
 
 const Footer = () => {
+  const animate = useGsap();
+
   return (
     <footer className="py-10 bg-dark text-white">
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link
+            ref={animate({ x: 50, scale: 0.9 })}
+            to="/"
+            className="flex items-center"
+          >
             <img
               width={56}
               height={56}
@@ -26,26 +35,26 @@ const Footer = () => {
 
           {/* Nav */}
           <ul className="flex items-center gap-8">
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}>
               <a href="#home">Asosiy</a>
             </li>
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}>
               <a href="#about">Haqida</a>
             </li>
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}>
               <a href="#modules">Modullar</a>
             </li>
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}>
               <a href="#gallery">Fotogalareya</a>
             </li>
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.6 })}>
               <a href="#comments">Sharxlar</a>
             </li>
           </ul>
 
           {/* Social */}
           <ul className="flex items-center gap-3.5">
-            <li>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.7 })}>
               <a
                 target="_blank"
                 title="Facebook"
@@ -61,7 +70,8 @@ const Footer = () => {
                 />
               </a>
             </li>
-            <li>
+
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.8 })}>
               <a
                 target="_blank"
                 title="Instagram"
@@ -77,7 +87,8 @@ const Footer = () => {
                 />
               </a>
             </li>
-            <li>
+
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.9 })}>
               <a
                 target="_blank"
                 title="Telegram"

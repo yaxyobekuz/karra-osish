@@ -1,5 +1,8 @@
 import React from "react";
 
+// Animation
+import useGsap from "../hooks/useGsap";
+
 // Components
 import Gallery from "../components/Gallery";
 import Comments from "../components/Comments";
@@ -7,18 +10,15 @@ import Purposes from "../components/Purposes";
 import ModulesList from "../components/ModuleList";
 import Information from "../components/Information";
 
+// Data
+import forEntrepreneurs from "../data/forEntrepreneurs";
+
 // Images
-import appIcon from "../assets/images/icons/app.svg";
 import bullImg from "../assets/images/others/bull.png";
-import bullIcon from "../assets/images/icons/bull.svg";
-import layerIcon from "../assets/images/icons/layer.svg";
 import moneyImg from "../assets/images/others/money.png";
 import booksImg from "../assets/images/others/books.png";
-import shieldIcon from "../assets/images/icons/shield.svg";
-import objectIcon from "../assets/images/icons/object.svg";
 import handshakeImg from "../assets/images/others/handshake.png";
 import megaphoneImg from "../assets/images/others/megaphone.png";
-import expansionIcon from "../assets/images/icons/expansion.svg";
 import arrowRightImg from "../assets/images/icons/arrow-right.svg";
 import sherzodTursunovImg from "../assets/images/others/sherzod-tursunov.png";
 import bekzodKomilovaBg from "../assets/images/backgrounds/bekzod-komilov.jpg";
@@ -27,6 +27,8 @@ import barnoTursunovaBg from "../assets/images/backgrounds/barno-tursunova.jpg";
 import sherzodTursunovBg from "../assets/images/backgrounds/sherzod-tursunov.jpg";
 
 const Home = () => {
+  const animate = useGsap();
+
   return (
     <>
       {/* Features */}
@@ -36,12 +38,18 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 className="text-3xl font-bold text-white">
+              <h2
+                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
+                className="text-3xl font-bold text-white"
+              >
                 Dastur kimlar uchun?
               </h2>
 
               {/* Section description */}
-              <p className="text-lg text-white">
+              <p
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                className="text-lg text-white"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -49,161 +57,31 @@ const Home = () => {
 
           {/* Cards */}
           <ul className="grid grid-cols-3 gap-5">
-            {/* 1 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={layerIcon}
-                alt="Layer icon"
-                className="size-10"
-              />
+            {forEntrepreneurs.map(({ title, description, icon }, index) => (
+              <li
+                key={index}
+                ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
+                className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl"
+              >
+                {/* Icon */}
+                <img
+                  width={40}
+                  alt="Icon"
+                  src={icon}
+                  height={40}
+                  className="size-10"
+                />
 
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
+                {/* Details */}
+                <div className="space-y-3.5">
+                  {/* Item title */}
+                  <h3 className="font-semibold text-lg text-white">{title}</h3>
 
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
-
-            {/* 2 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={objectIcon}
-                alt="Object icon"
-                className="size-10"
-              />
-
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
-
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
-
-            {/* 3 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={appIcon}
-                alt="Layer icon"
-                className="size-10"
-              />
-
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
-
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
-
-            {/* 4 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={bullIcon}
-                alt="Bull icon"
-                className="size-10"
-              />
-
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
-
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
-
-            {/* 5 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={shieldIcon}
-                alt="Shield icon"
-                className="size-10"
-              />
-
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
-
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
-
-            {/* 6 */}
-            <li className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl">
-              {/* Icon */}
-              <img
-                width={40}
-                height={40}
-                src={expansionIcon}
-                className="size-10"
-                alt="Expansion icon"
-              />
-
-              {/* Details */}
-              <div className="space-y-3.5">
-                {/* Item title */}
-                <h3 className="font-semibold text-lg text-white">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h3>
-
-                {/* Item description */}
-                <p className="text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Minima, sequi!
-                </p>
-              </div>
-            </li>
+                  {/* Item description */}
+                  <p className="text-white">{description}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
@@ -215,10 +93,18 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 className="text-3xl font-bold">Asoschilar</h2>
+              <h2
+                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
+                className="text-3xl font-bold"
+              >
+                Asoschilar
+              </h2>
 
               {/* Section description */}
-              <p className="max-w-xl text-lg">
+              <p
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                className="max-w-xl text-lg"
+              >
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -228,6 +114,7 @@ const Home = () => {
           <ul className="grid grid-cols-1 gap-5 md:grid-cols-4">
             {/* 1 */}
             <li
+              ref={animate({ x: -50, scale: 0.9, delay: 0.1 })}
               style={{ background: `url(${sherzodTursunovBg})` }}
               className="flex items-end relative overflow-hidden !bg-cover !bg-no-repeat rounded-3xl p-8 row-span-2 col-span-2"
             >
@@ -244,6 +131,7 @@ const Home = () => {
             {/* 2 */}
             <li
               style={{ background: `url(${barnoTursunovaBg})` }}
+              ref={animate({ y: -50, x: 50, scale: 0.9, delay: 0.2 })}
               className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl col-span-2"
             >
               <h3 className="z-10 text-2xl font-medium">
@@ -258,6 +146,7 @@ const Home = () => {
 
             {/* 3 */}
             <li
+              ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
               style={{ background: `url(${bekzodKomilovaBg})` }}
               className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
             >
@@ -273,6 +162,7 @@ const Home = () => {
 
             {/* 4 */}
             <li
+              ref={animate({ y: 50, x: 50, scale: 0.9, delay: 0.5 })}
               style={{ background: `url(${shirinKomilovaBg})` }}
               className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
             >
@@ -296,10 +186,18 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 className="text-3xl font-bold">Kurs formati haqida</h2>
+              <h2
+                className="text-3xl font-bold"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
+              >
+                Kurs formati haqida
+              </h2>
 
               {/* Section description */}
-              <p className="max-w-xl text-lg">
+              <p
+                className="max-w-xl text-lg"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              >
                 Toshkent filialimizda 1 hafta davomida 1 marotaba jonli
                 uchrashuv tashkil qilinadi. Uchrashuv davomida quyidagi
                 muammolarga yechim topamiz.
@@ -310,7 +208,10 @@ const Home = () => {
           {/* Main contents */}
           <ul className="flex flex-wrap items-center justify-center gap-5">
             {/* 1 */}
-            <li className="flex flex-col items-center justify-center gap-3.5 max-w-52">
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.1 })}
+              className="flex flex-col items-center justify-center gap-3.5 max-w-52"
+            >
               <img
                 width={208}
                 height={208}
@@ -326,7 +227,10 @@ const Home = () => {
             </li>
 
             {/* 2 */}
-            <li className="flex flex-col items-center justify-center gap-3.5 max-w-52">
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+              className="flex flex-col items-center justify-center gap-3.5 max-w-52"
+            >
               <img
                 width={208}
                 height={208}
@@ -342,7 +246,10 @@ const Home = () => {
             </li>
 
             {/* 3 */}
-            <li className="flex flex-col items-center justify-center gap-3.5 max-w-52">
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+              className="flex flex-col items-center justify-center gap-3.5 max-w-52"
+            >
               <img
                 width={208}
                 height={208}
@@ -358,7 +265,10 @@ const Home = () => {
             </li>
 
             {/* 4 */}
-            <li className="flex flex-col items-center justify-center gap-3.5 max-w-52">
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}
+              className="flex flex-col items-center justify-center gap-3.5 max-w-52"
+            >
               <img
                 width={208}
                 height={208}
@@ -374,7 +284,10 @@ const Home = () => {
             </li>
 
             {/* 5 */}
-            <li className="flex flex-col items-center justify-center gap-3.5 max-w-52">
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}
+              className="flex flex-col items-center justify-center gap-3.5 max-w-52"
+            >
               <img
                 width={208}
                 height={208}
@@ -396,7 +309,10 @@ const Home = () => {
       <section className="py-20">
         <div className="container">
           {/* Title */}
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2
+            ref={animate({ y: 50, scale: 0.9 })}
+            className="text-3xl font-bold text-center mb-12"
+          >
             Kurs davomida quyidagi ma'lumotlarga ega bo'lasiz
           </h2>
 
@@ -411,10 +327,18 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 className="text-3xl font-bold">Maqsadlar</h2>
+              <h2
+                className="text-3xl font-bold"
+                ref={animate({ y: 50, scale: 0.9 })}
+              >
+                Maqsadlar
+              </h2>
 
               {/* Section description */}
-              <p className="text-lg">
+              <p
+                className="text-lg"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -431,14 +355,18 @@ const Home = () => {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <img
               className="p-12"
-              src={sherzodTursunovImg}
               alt="Sherzod tursunov"
+              src={sherzodTursunovImg}
+              ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
             />
 
             {/* Content */}
             <div className="flex flex-col items-center justify-center gap-5">
               {/* 1 */}
-              <div className="max-w-lg space-y-3 text-center w-full bg-primary text-white p-8 rounded-2xl">
+              <div
+                ref={animate({ y: -50, scale: 0.9 })}
+                className="max-w-lg space-y-3 text-center w-full bg-primary text-white p-8 rounded-2xl"
+              >
                 <h3 className="text-[17px] font-semibold">
                   "Eurodesign" asoschisi
                 </h3>
@@ -451,7 +379,10 @@ const Home = () => {
               </div>
 
               {/* 2 */}
-              <div className="max-w-lg space-y-3 text-center w-full bg-dark text-white p-8 rounded-2xl">
+              <div
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                className="max-w-lg space-y-3 text-center w-full bg-dark text-white p-8 rounded-2xl"
+              >
                 <h3 className="text-[17px] font-semibold">
                   "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
                   yaratgan
@@ -473,7 +404,10 @@ const Home = () => {
       <section id="modules" className="py-20">
         <div className="container">
           {/* Title */}
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">
+          <h2
+            ref={animate({ y: 50, scale: 0.9 })}
+            className="text-3xl font-bold text-primary text-center mb-12"
+          >
             Asosiy modullar
           </h2>
 
@@ -486,11 +420,19 @@ const Home = () => {
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2 className="text-3xl font-bold text-center">Fotogalareya</h2>
+            <h2
+              ref={animate({ x: -50, scale: 0.9 })}
+              className="text-3xl font-bold text-center"
+            >
+              Fotogalareya
+            </h2>
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button className="btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+                className="btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70"
+              >
                 <img
                   width={28}
                   height={28}
@@ -500,7 +442,10 @@ const Home = () => {
                 />
               </button>
 
-              <button className="btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+                className="btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70"
+              >
                 <img
                   width={28}
                   height={28}
@@ -516,16 +461,24 @@ const Home = () => {
         <Gallery />
       </section>
 
-      {/* Gallery */}
+      {/* Comments */}
       <section id="comments" className="py-20">
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2 className="text-3xl font-bold text-center">Sharxlar</h2>
+            <h2
+              ref={animate({ x: -50, scale: 0.9 })}
+              className="text-3xl font-bold text-center"
+            >
+              Sharxlar
+            </h2>
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button className="comments-swiper-btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+                className="comments-swiper-btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70"
+              >
                 <img
                   width={28}
                   height={28}
@@ -535,7 +488,10 @@ const Home = () => {
                 />
               </button>
 
-              <button className="comments-swiper-btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+                className="comments-swiper-btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70"
+              >
                 <img
                   width={28}
                   height={28}

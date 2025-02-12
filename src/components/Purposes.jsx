@@ -1,9 +1,5 @@
-import { useEffect, useRef } from "react";
-
-// Gsap
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// Animation
+import useGsap from "../hooks/useGsap";
 
 // Data
 import purposes from "../data/purposes";
@@ -12,24 +8,7 @@ import purposes from "../data/purposes";
 import polygonIcon from "../assets/images/icons/polygon.svg";
 
 const Purposes = () => {
-  const listRef = useRef([]);
-
-  useEffect(() => {
-    listRef.current.forEach((item, index) => {
-      gsap.from(item.querySelector("h3"), {
-        opacity: 0,
-        y: 40,
-        delay: 0.05 * (index + 1),
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    });
-  }, []);
+  const animate = useGsap();
 
   return (
     <ol className="grid grid-cols-3 gap-5">
@@ -37,7 +16,7 @@ const Purposes = () => {
         <li
           key={index}
           style={{ background: bg, color }}
-          ref={(el) => (listRef.current[index] = el)}
+          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
           className="flex flex-col justify-between gap-5 relative overflow-hidden min-h-52 !bg-cover !bg-no-repeat p-8 rounded-3xl"
         >
           {/* Index */}
