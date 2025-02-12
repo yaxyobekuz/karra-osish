@@ -19,9 +19,9 @@ const Footer = () => {
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
           <Link
-            ref={animate({ x: 50, scale: 0.9 })}
             to="/"
             className="flex items-center"
+            ref={animate({ x: 50, scale: 0.9 }, 100)}
           >
             <img
               width={56}
@@ -35,26 +35,26 @@ const Footer = () => {
 
           {/* Nav */}
           <ul className="flex items-center gap-8">
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 }, 100)}>
               <a href="#home">Asosiy</a>
             </li>
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 }, 100)}>
               <a href="#about">Haqida</a>
             </li>
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.4 }, 100)}>
               <a href="#modules">Modullar</a>
             </li>
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.5 }, 100)}>
               <a href="#gallery">Fotogalareya</a>
             </li>
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.6 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.6 }, 100)}>
               <a href="#comments">Sharxlar</a>
             </li>
           </ul>
 
           {/* Social */}
           <ul className="flex items-center gap-3.5">
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.7 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.7 }, 100)}>
               <a
                 target="_blank"
                 title="Facebook"
@@ -71,7 +71,7 @@ const Footer = () => {
               </a>
             </li>
 
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.8 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.8 }, 100)}>
               <a
                 target="_blank"
                 title="Instagram"
@@ -88,7 +88,7 @@ const Footer = () => {
               </a>
             </li>
 
-            <li ref={animate({ x: 50, scale: 0.9, delay: 0.9 })}>
+            <li ref={animate({ x: 50, scale: 0.9, delay: 0.9 }, 100)}>
               <a
                 target="_blank"
                 title="Telegram"

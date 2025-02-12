@@ -1,15 +1,16 @@
 import { useRef, useEffect } from "react";
+
+// Gsap
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// GSAP ScrollTrigger'ni ro‘yxatdan o'tkazamiz
 gsap.registerPlugin(ScrollTrigger);
 
 const useGsap = () => {
-  const elementsRef = useRef([]); // Barcha elementlarni massivda saqlaymiz
+  const elementsRef = useRef([]);
 
   useEffect(() => {
-    elementsRef.current.forEach(({ el, options }) => {
+    elementsRef.current.forEach(({ el, options, start }) => {
       if (el) {
         gsap.from(el, {
           opacity: 0,
@@ -19,7 +20,7 @@ const useGsap = () => {
           ...options,
           scrollTrigger: {
             trigger: el,
-            start: "top 85%",
+            start: `top ${start}%`,
             toggleActions: "play none none none",
           },
         });
@@ -29,13 +30,13 @@ const useGsap = () => {
     return () => ScrollTrigger.getAll().forEach((st) => st.kill());
   }, []);
 
-  const addAnimation = (options) => (el) => {
+  const addAnimation = (options, start) => (el) => {
     if (el && !elementsRef.current.some((e) => e.el === el)) {
-      elementsRef.current.push({ el, options });
+      elementsRef.current.push({ el, options, start });
     }
   };
 
-  return (options) => addAnimation(options);
+  return (options, start = 85) => addAnimation(options, start);
 };
 
 export default useGsap;
