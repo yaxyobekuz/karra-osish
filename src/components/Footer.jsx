@@ -9,7 +9,7 @@ import instagramIcon from "../assets/images/icons/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer className="py-20 bg-dark text-white">
+    <footer className="py-10 bg-dark text-white">
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
