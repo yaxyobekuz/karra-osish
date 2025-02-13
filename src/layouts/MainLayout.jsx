@@ -57,8 +57,8 @@ const MainLayout = () => {
               className="flex items-center justify-center gap-5 w-full"
             >
               <a
+                href="#develop"
                 ref={animate({ x: -50 })}
-                href="#"
                 className="btn-primary w-40"
               >
                 Qabulga yozilish
@@ -103,7 +103,7 @@ const MainLayout = () => {
 
             {/* Right Icons */}
             <img
-              ref={animate({ scale: 0.5, y: 50, delay: 0.5 })}
+              ref={animate({ scale: 0.5, y: 50, delay: 0.6 })}
               width={48}
               height={48}
               src={statsIcon}
@@ -112,7 +112,7 @@ const MainLayout = () => {
             />
 
             <img
-              ref={animate({ scale: 0.5, y: 50, delay: 0.6 })}
+              ref={animate({ scale: 0.5, y: 50, delay: 0.4 })}
               width={48}
               height={48}
               src={flowIcon}

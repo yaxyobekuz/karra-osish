@@ -18,6 +18,16 @@
   h2 {
     @apply text-4xl font-bold;
   }
+
+  input,
+  textarea,
+  select {
+    @apply w-full bg-white outline-none rounded-lg;
+  }
+
+  textarea {
+    @apply py-2.5 min-h-40 max-h-96 sm:min-h-32;
+  }
 }
 
 /* --- Components --- */

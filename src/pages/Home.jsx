@@ -3,20 +3,25 @@ import React from "react";
 // Animation
 import useGsap from "../hooks/useGsap";
 
+// Data
+import forEntrepreneurs from "../data/forEntrepreneurs";
+
 // Components
 import Gallery from "../components/Gallery";
 import Comments from "../components/Comments";
 import Purposes from "../components/Purposes";
 import ModulesList from "../components/ModuleList";
 import Information from "../components/Information";
-
-// Data
-import forEntrepreneurs from "../data/forEntrepreneurs";
+import FormInputWrapper from "../components/FormInputWrapper";
 
 // Images
+import telIcon from "../assets/images/icons/tel.svg";
+import mailIcon from "../assets/images/icons/mail.svg";
 import bullImg from "../assets/images/others/bull.png";
+import dateIcon from "../assets/images/icons/date.svg";
 import moneyImg from "../assets/images/others/money.png";
 import booksImg from "../assets/images/others/books.png";
+import locationIcon from "../assets/images/icons/location.svg";
 import handshakeImg from "../assets/images/others/handshake.png";
 import megaphoneImg from "../assets/images/others/megaphone.png";
 import arrowRightImg from "../assets/images/icons/arrow-right.svg";
@@ -87,7 +92,7 @@ const Home = () => {
       </section>
 
       {/* Owners */}
-      <section className="py-20">
+      <section className="pt-20 pb-10">
         <div className="container !max-w-6xl">
           {/* Top */}
           <div className="flex justify-center w-full mb-12">
@@ -177,7 +182,7 @@ const Home = () => {
       </section>
 
       {/* About format of course */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-10">
         <div className="container">
           {/* Top */}
           <div className="flex justify-center w-full mb-12">
@@ -300,7 +305,7 @@ const Home = () => {
       </section>
 
       {/* Information */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container">
           {/* Title */}
           <h2
@@ -339,7 +344,7 @@ const Home = () => {
       </section>
 
       {/* Owner */}
-      <section className="py-20">
+      <section className="pt-20 pb-10">
         <div className="container">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <img
@@ -390,7 +395,7 @@ const Home = () => {
       </section>
 
       {/* Modules */}
-      <section id="modules" className="py-20">
+      <section id="modules" className="py-10">
         <div className="container">
           {/* Title */}
           <h2
@@ -405,7 +410,7 @@ const Home = () => {
       </section>
 
       {/* Gallery */}
-      <section id="gallery" className="py-20">
+      <section id="gallery" className="py-10">
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
@@ -448,7 +453,7 @@ const Home = () => {
       </section>
 
       {/* Comments */}
-      <section id="comments" className="py-20">
+      <section id="comments" className="py-10">
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
@@ -488,6 +493,156 @@ const Home = () => {
         </div>
 
         <Comments />
+      </section>
+
+      {/* Form */}
+      <section id="develop" className="py-10">
+        <div className="container">
+          <div className="grid grid-cols-2 gap-5 items-center bg-white p-8 rounded-3xl">
+            <div className="space-y-14">
+              <h2 ref={animate({ x: 50, y: -50, scale: 1.3 })}>
+                Qabulga yozilish uchun <br /> anketani to'ldiring
+              </h2>
+
+              <div className="grid grid-cols-2 gap-5">
+                {/* 1 */}
+                <div
+                  className="flex items-center gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={mailIcon}
+                    alt="Mail icon"
+                    className="size-8"
+                  />
+
+                  <div className="space-y-1">
+                    <h3 className="font-medium text-lg">E-pochta</h3>
+                    <p className="opacity-70">info@karraosish.com</p>
+                  </div>
+                </div>
+
+                {/* 2 */}
+                <div
+                  className="flex items-center gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={telIcon}
+                    alt="Phone icon"
+                    className="size-8"
+                  />
+
+                  <div className="space-y-1">
+                    <h3 className="font-medium text-lg">Telefon raqam</h3>
+                    <a href="tel:+998998887766" className="opacity-70">
+                      +998 (99) 888-77-66
+                    </a>
+                  </div>
+                </div>
+
+                {/* 3 */}
+                <div
+                  className="flex items-center gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={locationIcon}
+                    alt="Location icon"
+                    className="size-8"
+                  />
+
+                  <div className="space-y-1">
+                    <h3 className="font-medium text-lg">Manzil</h3>
+                    <address className="opacity-70 not-italic">
+                      Toshkent shahar, Chilonzor
+                    </address>
+                  </div>
+                </div>
+
+                {/* 4 */}
+                <div
+                  className="flex items-center gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={dateIcon}
+                    alt="Date icon"
+                    className="size-8"
+                  />
+
+                  <div className="space-y-1">
+                    <h3 className="font-medium text-lg">Ish vaqti</h3>
+                    <p className="opacity-70">Du-Sha, 9:00 dan 18:00 gacha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form */}
+            <form className="space-y-5 p-8 bg-gray-light rounded-2xl">
+              <div className="text-2xl font-semibold">So'rov yuborish</div>
+
+              {/* First name */}
+              <div ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}>
+                <FormInputWrapper
+                  required
+                  label="Ism *"
+                  name="firstName"
+                  placeholder="Falonchi"
+                />
+              </div>
+
+              <div ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}>
+                {/* Phone number */}
+                <FormInputWrapper
+                  required
+                  type="tel"
+                  label="Telefon raqam *"
+                  placeholder="+998 (__) ___-__-__"
+                />
+              </div>
+
+              {/* Select */}
+              <div
+                className="space-y-3.5"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
+              >
+                <label htmlFor="select" className="pl-1.5">
+                  Variantlardan birni tanlang *
+                </label>
+
+                {/* Select */}
+                <select name="variants" id="select" className="h-11 px-3.5">
+                  <option value="Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.">
+                    Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.
+                  </option>
+                  <option value="Dastur haqida bilaman, lekin savollarim bor.">
+                    Dastur haqida bilaman, lekin savollarim bor.
+                  </option>
+                  <option value="Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.">
+                    Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.
+                  </option>
+                </select>
+              </div>
+
+              <button
+                className="btn-primary w-full"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
+              >
+                Yuborish
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
     </>
   );

@@ -41,7 +41,7 @@ const Header = () => {
           </ul>
 
           {/* Button */}
-          <a href="#" className="btn-primary">
+          <a href="#develop" className="btn-primary">
             Qabulga yozilish
           </a>
         </div>
