@@ -499,157 +499,167 @@ const Home = () => {
         <Comments />
       </section>
 
-      <div className="hidden">
-        {/* Form */}
-        <section id="develop" className="py-10">
-          <div className="container">
-            <div className="grid grid-cols-2 gap-5 items-center bg-white p-8 rounded-3xl">
-              <div className="space-y-14">
-                <h2 ref={animate({ x: 50, y: -50, scale: 1.3 })}>
-                  Qabulga yozilish uchun <br /> anketani to'ldiring
-                </h2>
+      {/* Form */}
+      <section id="develop" className="py-10">
+        <div className="container max-xs:!px-0">
+          <div className="grid grid-cols-1 gap-5 items-center bg-white p-5 rounded-3xl md:grid-cols-2 lg:p-8">
+            <div className="space-y-6 md:space-y-14">
+              <h2
+                className="text-center md:text-start"
+                ref={animate({ x: 50, y: -50, scale: 1.3 })}
+              >
+                Qabulga yozilish uchun <br /> anketani to'ldiring
+              </h2>
 
-                <div className="grid grid-cols-2 gap-5">
-                  {/* 1 */}
-                  <div
-                    className="flex items-center gap-5"
-                    ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                  >
-                    <img
-                      width={32}
-                      height={32}
-                      src={mailIcon}
-                      alt="Mail icon"
-                      className="size-8"
-                    />
+              <div className="grid grid-cols-1 gap-3 xs:grid-cols-2 sm:gap-5">
+                {/* 1 */}
+                <div
+                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={mailIcon}
+                    alt="Mail icon"
+                    className="size-6 sm:size-7 lg:size-8"
+                  />
 
-                    <div className="space-y-1">
-                      <h3 className="font-medium text-lg">E-pochta</h3>
-                      <p className="opacity-70">info@karraosish.com</p>
-                    </div>
+                  <div className="space-y-1">
+                    <h3 className="font-medium lg:text-lg">E-pochta</h3>
+                    <p className="opacity-70 text-sm sm:text-base">
+                      info@karraosish.com
+                    </p>
                   </div>
+                </div>
 
-                  {/* 2 */}
-                  <div
-                    className="flex items-center gap-5"
-                    ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
-                  >
-                    <img
-                      width={32}
-                      height={32}
-                      src={telIcon}
-                      alt="Phone icon"
-                      className="size-8"
-                    />
+                {/* 2 */}
+                <div
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
+                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={telIcon}
+                    alt="Phone icon"
+                    className="size-6 sm:size-7 lg:size-8"
+                  />
 
-                    <div className="space-y-1">
-                      <h3 className="font-medium text-lg">Telefon raqam</h3>
-                      <a href="tel:+998998887766" className="opacity-70">
-                        +998 (99) 888-77-66
-                      </a>
-                    </div>
+                  <div className="space-y-1">
+                    <h3 className="font-medium lg:text-lg">Telefon raqam</h3>
+                    <a
+                      href="tel:+998998887766"
+                      className="opacity-70 text-sm sm:text-base"
+                    >
+                      +998 (99) 888-77-66
+                    </a>
                   </div>
+                </div>
 
-                  {/* 3 */}
-                  <div
-                    className="flex items-center gap-5"
-                    ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
-                  >
-                    <img
-                      width={32}
-                      height={32}
-                      src={locationIcon}
-                      alt="Location icon"
-                      className="size-8"
-                    />
+                {/* 3 */}
+                <div
+                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={locationIcon}
+                    alt="Location icon"
+                    className="size-6 sm:size-7 lg:size-8"
+                  />
 
-                    <div className="space-y-1">
-                      <h3 className="font-medium text-lg">Manzil</h3>
-                      <address className="opacity-70 not-italic">
-                        Toshkent shahar, Chilonzor
-                      </address>
-                    </div>
+                  <div className="space-y-1">
+                    <h3 className="font-medium lg:text-lg">Manzil</h3>
+                    <address className="opacity-70 text-sm sm:text-base not-italic">
+                      Toshkent shahar, Chilonzor
+                    </address>
                   </div>
+                </div>
 
-                  {/* 4 */}
-                  <div
-                    className="flex items-center gap-5"
-                    ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
-                  >
-                    <img
-                      width={32}
-                      height={32}
-                      src={dateIcon}
-                      alt="Date icon"
-                      className="size-8"
-                    />
+                {/* 4 */}
+                <div
+                  ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
+                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={dateIcon}
+                    alt="Date icon"
+                    className="size-6 sm:size-7 lg:size-8"
+                  />
 
-                    <div className="space-y-1">
-                      <h3 className="font-medium text-lg">Ish vaqti</h3>
-                      <p className="opacity-70">Du-Sha, 9:00 dan 18:00 gacha</p>
-                    </div>
+                  <div className="space-y-1">
+                    <h3 className="font-medium lg:text-lg">Ish vaqti</h3>
+                    <p className="opacity-70 text-sm sm:text-base">
+                      Du-Sha, 9:00 dan 18:00 gacha
+                    </p>
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Form */}
-              <form className="space-y-5 p-8 bg-gray-light rounded-2xl">
-                <div className="text-2xl font-semibold">So'rov yuborish</div>
+            {/* Form */}
+            <form className="space-y-5 p-5 bg-gray-light rounded-2xl lg:p-8">
+              <div className="text-xl font-semibold xs:text-2xl">
+                So'rov yuborish
+              </div>
 
-                {/* First name */}
-                <div ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}>
-                  <FormInputWrapper
-                    required
-                    label="Ism *"
-                    name="firstName"
-                    placeholder="Falonchi"
-                  />
-                </div>
+              {/* First name */}
+              <div ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}>
+                <FormInputWrapper
+                  required
+                  label="Ism *"
+                  name="firstName"
+                  placeholder="Falonchi"
+                />
+              </div>
 
-                <div ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}>
-                  {/* Phone number */}
-                  <FormInputWrapper
-                    required
-                    type="tel"
-                    label="Telefon raqam *"
-                    placeholder="+998 (__) ___-__-__"
-                  />
-                </div>
+              <div ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}>
+                {/* Phone number */}
+                <FormInputWrapper
+                  required
+                  type="tel"
+                  label="Telefon raqam *"
+                  placeholder="+998 (__) ___-__-__"
+                />
+              </div>
+
+              {/* Select */}
+              <div
+                className="space-y-3.5"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
+              >
+                <label htmlFor="select" className="pl-1.5">
+                  Variantlardan birni tanlang *
+                </label>
 
                 {/* Select */}
-                <div
-                  className="space-y-3.5"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
-                >
-                  <label htmlFor="select" className="pl-1.5">
-                    Variantlardan birni tanlang *
-                  </label>
+                <select name="variants" id="select" className="h-11 px-3.5">
+                  <option value="Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.">
+                    Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.
+                  </option>
+                  <option value="Dastur haqida bilaman, lekin savollarim bor.">
+                    Dastur haqida bilaman, lekin savollarim bor.
+                  </option>
+                  <option value="Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.">
+                    Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.
+                  </option>
+                </select>
+              </div>
 
-                  {/* Select */}
-                  <select name="variants" id="select" className="h-11 px-3.5">
-                    <option value="Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.">
-                      Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.
-                    </option>
-                    <option value="Dastur haqida bilaman, lekin savollarim bor.">
-                      Dastur haqida bilaman, lekin savollarim bor.
-                    </option>
-                    <option value="Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.">
-                      Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.
-                    </option>
-                  </select>
-                </div>
-
-                <button
-                  className="btn-primary w-full"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
-                >
-                  Yuborish
-                </button>
-              </form>
-            </div>
+              <button
+                className="btn-primary w-full"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
+              >
+                Yuborish
+              </button>
+            </form>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };
