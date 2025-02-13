@@ -95,97 +95,97 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="hidden">
-        {/* Owners */}
-        <section className="pt-20 pb-10">
-          <div className="container !max-w-6xl">
-            {/* Top */}
-            <div className="flex justify-center w-full mb-12">
-              <div className="space-y-3.5 text-center">
-                {/* Section title */}
-                <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
-                  Asoschilar
-                </h2>
+      {/* Owners */}
+      <section className="pt-20 pb-10">
+        <div className="container !max-w-6xl">
+          {/* Top */}
+          <div className="flex justify-center w-full mb-12">
+            <div className="space-y-3.5 text-center">
+              {/* Section title */}
+              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
+                Asoschilar
+              </h2>
 
-                {/* Section description */}
-                <p
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                  className="max-w-xl text-lg"
-                >
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </p>
-              </div>
+              {/* Section description */}
+              <p
+                className="max-w-xl text-lg"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              >
+                Karra o'sish asosiy asoschilari
+              </p>
             </div>
-
-            {/* Main contents */}
-            <ul className="grid grid-cols-1 gap-5 md:grid-cols-4">
-              {/* 1 */}
-              <li
-                ref={animate({ x: -50, scale: 0.9, delay: 0.1 })}
-                style={{ background: `url(${sherzodTursunovBg})` }}
-                className="flex items-end relative overflow-hidden !bg-cover !bg-no-repeat rounded-3xl p-8 row-span-2 col-span-2"
-              >
-                <h3 className="z-10 text-3xl font-medium text-white">
-                  <span>Sherzod</span>
-                  <br />
-                  <span>Tursunov</span>
-                </h3>
-
-                {/* Text overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
-              </li>
-
-              {/* 2 */}
-              <li
-                style={{ background: `url(${barnoTursunovaBg})` }}
-                ref={animate({ y: -50, x: 50, scale: 0.9, delay: 0.2 })}
-                className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl col-span-2"
-              >
-                <h3 className="z-10 text-2xl font-medium">
-                  <span>Barno</span>
-                  <br />
-                  <span>Tursunova</span>
-                </h3>
-
-                {/* Text overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white/70" />
-              </li>
-
-              {/* 3 */}
-              <li
-                ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
-                style={{ background: `url(${bekzodKomilovaBg})` }}
-                className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
-              >
-                <h3 className="z-10 text-xl font-medium text-white">
-                  <span>Bekzod</span>
-                  <br />
-                  <span>Komilov</span>
-                </h3>
-
-                {/* Text overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
-              </li>
-
-              {/* 4 */}
-              <li
-                ref={animate({ y: 50, x: 50, scale: 0.9, delay: 0.5 })}
-                style={{ background: `url(${shirinKomilovaBg})` }}
-                className="flex items-end h-56 relative overflow-hidden !bg-cover !bg-no-repeat p-6 rounded-3xl"
-              >
-                <h3 className="z-10 text-xl font-medium text-white">
-                  <span>Shirin</span>
-                  <br />
-                  <span>Komilova</span>
-                </h3>
-
-                {/* Text overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
-              </li>
-            </ul>
           </div>
-        </section>
 
+          {/* Main contents */}
+          <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4">
+            {/* 1 */}
+            <li
+              ref={animate({ x: -50, scale: 0.9, delay: 0.1 })}
+              style={{ background: `url(${sherzodTursunovBg})` }}
+              className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
+            >
+              <h3 className="z-10 font-medium text-white text-xl md:text-2xl lg:text-3xl">
+                <span>Sherzod</span>
+                <br />
+                <span>Tursunov</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+
+            {/* 2 */}
+            <li
+              style={{ background: `url(${barnoTursunovaBg})` }}
+              ref={animate({ y: -50, x: 50, scale: 0.9, delay: 0.2 })}
+              className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
+            >
+              <h3 className="z-10 text-lg font-medium sm:text-xl mg:text-2xl">
+                <span>Barno</span>
+                <br />
+                <span>Tursunova</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white/70" />
+            </li>
+
+            {/* 3 */}
+            <li
+              ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
+              style={{ background: `url(${bekzodKomilovaBg})` }}
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
+            >
+              <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
+                <span>Bekzod</span>
+                <br />
+                <span>Komilov</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+
+            {/* 4 */}
+            <li
+              ref={animate({ y: 50, x: 50, scale: 0.9, delay: 0.5 })}
+              style={{ background: `url(${shirinKomilovaBg})` }}
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
+            >
+              <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
+                <span>Shirin</span>
+                <br />
+                <span>Komilova</span>
+              </h3>
+
+              {/* Text overlay */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/70" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div className="hidden">
         {/* About format of course */}
         <section id="about" className="py-10">
           <div className="container">
