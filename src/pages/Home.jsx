@@ -347,58 +347,58 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="hidden">
-        {/* Owner */}
-        <section className="pt-20 pb-10">
-          <div className="container">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              <img
-                className="p-12"
-                alt="Sherzod tursunov"
-                src={sherzodTursunovImg}
-                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
-              />
+      {/* Owner */}
+      <section className="pt-20 pb-10">
+        <div className="container">
+          <div className="grid grid-cols-1 gap-8 md:gap-5 md:grid-cols-2">
+            <img
+              alt="Sherzod tursunov"
+              src={sherzodTursunovImg}
+              className="mx-auto max-w-md w-full md:max-w-max md:mx-0 md:p-5 lg:p-12"
+              ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
+            />
 
-              {/* Content */}
-              <div className="flex flex-col items-center justify-center gap-5">
-                {/* 1 */}
-                <div
-                  ref={animate({ y: -50, scale: 0.9 })}
-                  className="max-w-lg space-y-3 text-center w-full bg-primary text-white p-8 rounded-2xl"
-                >
-                  <h3 className="text-[17px] font-semibold">
-                    "Eurodesign" asoschisi
-                  </h3>
+            {/* Content */}
+            <div className="flex flex-col items-center justify-center gap-5">
+              {/* 1 */}
+              <div
+                ref={animate({ y: -50, scale: 0.9 })}
+                className="max-w-lg space-y-3 text-center w-full bg-primary text-white py-8 px-4 rounded-2xl lg:px-8"
+              >
+                <h3 className="text-[17px] font-semibold">
+                  "Eurodesign" asoschisi
+                </h3>
 
-                  {/* Description */}
-                  <p className="opacity-80">
-                    270 million AQSh dollaridan ortiq aylanmaga ega bo'lgan
-                    kompaniya. Rossiyada o'z sohasida yetakchi uchlikka kiradi.
-                  </p>
-                </div>
+                {/* Description */}
+                <p className="opacity-80">
+                  270 million AQSh dollaridan ortiq aylanmaga ega bo'lgan
+                  kompaniya. Rossiyada o'z sohasida yetakchi uchlikka kiradi.
+                </p>
+              </div>
 
-                {/* 2 */}
-                <div
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                  className="max-w-lg space-y-3 text-center w-full bg-dark text-white p-8 rounded-2xl"
-                >
-                  <h3 className="text-[17px] font-semibold">
-                    "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
-                    yaratgan
-                  </h3>
+              {/* 2 */}
+              <div
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+                className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl lg:px-8"
+              >
+                <h3 className="text-[17px] font-semibold">
+                  "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
+                  yaratgan
+                </h3>
 
-                  {/* Description */}
-                  <p className="opacity-80">
-                    Kompaniyaning yillik aylanmasi 1,8 milliard rublga yetgan.
-                    2017-yilda Rossiya "Forbes" jurnalining "Yilning eng yaxshi
-                    franshizasi" reytingida kuchli uchlikdan joy olgan.
-                  </p>
-                </div>
+                {/* Description */}
+                <p className="opacity-80">
+                  Kompaniyaning yillik aylanmasi 1,8 milliard rublga yetgan.
+                  2017-yilda Rossiya "Forbes" jurnalining "Yilning eng yaxshi
+                  franshizasi" reytingida kuchli uchlikdan joy olgan.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="hidden">
         {/* Modules */}
         <section id="modules" className="py-10">
           <div className="container">
