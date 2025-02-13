@@ -14,18 +14,22 @@ const ModulesList = () => {
     <ol className="space-y-5">
       {modules.map((module, index) => (
         <li
-          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
-          className="bg-white space-y-6 p-8 rounded-3xl"
           key={module.id}
+          className="bg-white space-y-4 p-4 rounded-3xl sm:p-6 md:space-y-6 md:p-8"
+          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
         >
           {/* Top */}
-          <div className="flex items-start gap-5">
-            <span className="text-3xl font-semibold">0{module.id}.</span>
-            <h3 className="text-2xl font-medium mt-1">{module.title}</h3>
+          <div className="flex items-start gap-3 md:gap-5">
+            <span className="text-xl font-semibold sm:text-2xl md:text-3xl">
+              0{module.id}.
+            </span>
+            <h3 className="text-lg font-medium -mt-1 sm:mt-0 sm:text-xl md:text-2xl">
+              {module.title}
+            </h3>
           </div>
 
           {/* Purpose */}
-          <p className="text-lg opacity-70">{module.purpose}</p>
+          <p className="opacity-70 md:text-lg">{module.purpose}</p>
 
           {/* Points */}
           <ul className="space-y-3">
@@ -38,7 +42,7 @@ const ModulesList = () => {
                   alt="Success icon"
                   className="size-6"
                 />
-                <span className="text-lg">{point}</span>
+                <span className="md:text-lg">{point}</span>
               </li>
             ))}
           </ul>

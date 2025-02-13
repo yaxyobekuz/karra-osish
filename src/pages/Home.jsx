@@ -398,22 +398,22 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Modules */}
+      <section id="modules" className="py-10">
+        <div className="container">
+          {/* Title */}
+          <h2
+            ref={animate({ y: 50, scale: 0.9 })}
+            className="text-primary text-center mb-12"
+          >
+            Asosiy modullar
+          </h2>
+
+          <ModulesList />
+        </div>
+      </section>
+
       <div className="hidden">
-        {/* Modules */}
-        <section id="modules" className="py-10">
-          <div className="container">
-            {/* Title */}
-            <h2
-              ref={animate({ y: 50, scale: 0.9 })}
-              className="text-primary text-center mb-12"
-            >
-              Asosiy modullar
-            </h2>
-
-            <ModulesList />
-          </div>
-        </section>
-
         {/* Gallery */}
         <section id="gallery" className="py-10">
           <div className="container">
