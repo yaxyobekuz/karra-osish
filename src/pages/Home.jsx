@@ -185,130 +185,130 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="hidden">
-        {/* About format of course */}
-        <section id="about" className="py-10">
-          <div className="container">
-            {/* Top */}
-            <div className="flex justify-center w-full mb-12">
-              <div className="space-y-3.5 text-center">
-                {/* Section title */}
-                <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
-                  Kurs formati haqida
-                </h2>
+      {/* About format of course */}
+      <section id="about" className="py-10">
+        <div className="container">
+          {/* Top */}
+          <div className="flex justify-center w-full mb-12">
+            <div className="space-y-3.5 text-center">
+              {/* Section title */}
+              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
+                Kurs formati haqida
+              </h2>
 
-                {/* Section description */}
-                <p
-                  className="max-w-xl text-lg"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                >
-                  Toshkent filialimizda 1 hafta davomida 1 marotaba jonli
-                  uchrashuv tashkil qilinadi. Uchrashuv davomida quyidagi
-                  muammolarga yechim topamiz.
-                </p>
-              </div>
+              {/* Section description */}
+              <p
+                className="max-w-xl text-lg"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              >
+                Toshkent filialimizda 1 hafta davomida 1 marotaba jonli
+                uchrashuv tashkil qilinadi. Uchrashuv davomida quyidagi
+                muammolarga yechim topamiz.
+              </p>
             </div>
-
-            {/* Main contents */}
-            <ul className="flex flex-wrap items-center justify-center gap-5">
-              {/* 1 */}
-              <li
-                ref={animate({ x: 50, scale: 0.9, delay: 0.1 })}
-                className="flex flex-col items-center justify-center gap-3.5 max-w-52"
-              >
-                <img
-                  width={208}
-                  height={208}
-                  src={booksImg}
-                  alt="Books image"
-                  className="size-52"
-                />
-
-                {/* Item title */}
-                <h3 className="h-14 text-[17px] font-medium text-center">
-                  Fikrlash va psixologiya
-                </h3>
-              </li>
-
-              {/* 2 */}
-              <li
-                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-                className="flex flex-col items-center justify-center gap-3.5 max-w-52"
-              >
-                <img
-                  width={208}
-                  height={208}
-                  src={bullImg}
-                  alt="Bull image"
-                  className="size-52"
-                />
-
-                {/* Item title */}
-                <h3 className="h-14 text-[17px] font-medium text-center">
-                  Biznes modellar <br /> va bozor
-                </h3>
-              </li>
-
-              {/* 3 */}
-              <li
-                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-                className="flex flex-col items-center justify-center gap-3.5 max-w-52"
-              >
-                <img
-                  width={208}
-                  height={208}
-                  src={handshakeImg}
-                  alt="Handshake image"
-                  className="size-52"
-                />
-
-                {/* Item title */}
-                <h3 className="h-14 text-[17px] font-medium text-center">
-                  Hamkorlik va jamoa
-                </h3>
-              </li>
-
-              {/* 4 */}
-              <li
-                ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}
-                className="flex flex-col items-center justify-center gap-3.5 max-w-52"
-              >
-                <img
-                  width={208}
-                  height={208}
-                  src={megaphoneImg}
-                  alt="Megaphone image"
-                  className="size-52"
-                />
-
-                {/* Item title */}
-                <h3 className="h-14 text-[17px] font-medium text-center">
-                  Marketing va reklama
-                </h3>
-              </li>
-
-              {/* 5 */}
-              <li
-                ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}
-                className="flex flex-col items-center justify-center gap-3.5 max-w-52"
-              >
-                <img
-                  width={208}
-                  height={208}
-                  src={moneyImg}
-                  alt="Money image"
-                  className="size-52"
-                />
-
-                {/* Item title */}
-                <h3 className="h-14 text-[17px] font-medium text-center">
-                  Sotuv va daromad
-                </h3>
-              </li>
-            </ul>
           </div>
-        </section>
 
+          {/* Main contents */}
+          <ul className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+            {/* 1 */}
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.1 })}
+              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
+            >
+              <img
+                width={208}
+                height={208}
+                src={booksImg}
+                alt="Books image"
+                className="size-32 sm:size-40 md:size-52"
+              />
+
+              {/* Item title */}
+              <h3 className="h-12 font-medium text-center md:h-14 md:text-[17px] ">
+                Fikrlash va psixologiya
+              </h3>
+            </li>
+
+            {/* 2 */}
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
+            >
+              <img
+                width={208}
+                height={208}
+                src={bullImg}
+                alt="Bull image"
+                className="size-32 sm:size-40 md:size-52"
+              />
+
+              {/* Item title */}
+              <h3 className="h-12 font-medium text-center md:h-14 md:text-[17px] ">
+                Biznes modellar <br /> va bozor
+              </h3>
+            </li>
+
+            {/* 3 */}
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
+            >
+              <img
+                width={208}
+                height={208}
+                src={handshakeImg}
+                alt="Handshake image"
+                className="size-32 sm:size-40 md:size-52"
+              />
+
+              {/* Item title */}
+              <h3 className="h-12 font-medium text-center md:h-14 md:text-[17px] ">
+                Hamkorlik va jamoa
+              </h3>
+            </li>
+
+            {/* 4 */}
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}
+              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
+            >
+              <img
+                width={208}
+                height={208}
+                src={megaphoneImg}
+                alt="Megaphone image"
+                className="size-32 sm:size-40 md:size-52"
+              />
+
+              {/* Item title */}
+              <h3 className="h-12 font-medium text-center md:h-14 md:text-[17px] ">
+                Marketing va reklama
+              </h3>
+            </li>
+
+            {/* 5 */}
+            <li
+              ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}
+              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
+            >
+              <img
+                width={208}
+                height={208}
+                src={moneyImg}
+                alt="Money image"
+                className="size-32 sm:size-40 md:size-52"
+              />
+
+              {/* Item title */}
+              <h3 className="h-12 font-medium text-center md:h-14 md:text-[17px] ">
+                Sotuv va daromad
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div className="hidden">
         {/* Information */}
         <section className="py-10">
           <div className="container">
