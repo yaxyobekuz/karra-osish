@@ -61,12 +61,12 @@ const Home = () => {
           </div>
 
           {/* Cards */}
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {forEntrepreneurs.map(({ title, description, icon }, index) => (
               <li
                 key={index}
                 ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
-                className="flex flex-col justify-between gap-5 min-h-64 bg-[#027FCC] p-8 rounded-3xl"
+                className="flex flex-col justify-between gap-5 min-h-52 bg-[#027FCC] p-5 rounded-3xl sm:p-6 sm:min-h-64 md:p-8"
               >
                 {/* Icon */}
                 <img
@@ -74,16 +74,20 @@ const Home = () => {
                   alt="Icon"
                   src={icon}
                   height={40}
-                  className="size-10"
+                  className="size-8 sm:size-9 lg:size-10"
                 />
 
                 {/* Details */}
                 <div className="space-y-3.5">
                   {/* Item title */}
-                  <h3 className="font-semibold text-lg text-white">{title}</h3>
+                  <h3 className="font-semibold text-white sm:text-[17px] lg:text-lg">
+                    {title}
+                  </h3>
 
                   {/* Item description */}
-                  <p className="text-white">{description}</p>
+                  <p className="text-white text-sm md:text-base">
+                    {description}
+                  </p>
                 </div>
               </li>
             ))}
