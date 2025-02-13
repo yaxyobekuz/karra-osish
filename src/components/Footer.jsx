@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer className="py-10 bg-dark text-white">
-      <div className="container">
+      <div className="container space-y-8 sm:space-y-5">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
           <Link
@@ -34,7 +34,7 @@ const Footer = () => {
           </Link>
 
           {/* Nav */}
-          <ul className="flex items-center gap-8">
+          <ul className="hidden items-center gap-8 lg:flex">
             <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 }, 100)}>
               <a href="#home">Asosiy</a>
             </li>
@@ -106,6 +106,25 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
+        {/* Nav */}
+        <ul className="flex flex-col items-center gap-8 sm:flex-row lg:hidden">
+          <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 }, 100)}>
+            <a href="#home">Asosiy</a>
+          </li>
+          <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 }, 100)}>
+            <a href="#about">Haqida</a>
+          </li>
+          <li ref={animate({ x: 50, scale: 0.9, delay: 0.4 }, 100)}>
+            <a href="#modules">Modullar</a>
+          </li>
+          <li ref={animate({ x: 50, scale: 0.9, delay: 0.5 }, 100)}>
+            <a href="#gallery">Fotogalareya</a>
+          </li>
+          <li ref={animate({ x: 50, scale: 0.9, delay: 0.6 }, 100)}>
+            <a href="#comments">Sharxlar</a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

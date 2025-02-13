@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // Images
 import logoIcon from "../assets/images/icons/logo.svg";
+import hamburgerIcon from "../assets/images/icons/hamburger.svg";
 
 const Header = () => {
   return (
@@ -16,13 +17,13 @@ const Header = () => {
               height={56}
               src={logoIcon}
               alt="Logo image"
-              className="size-14"
+              className="size-11 sm:size-12 md:size-14"
             />
             <span className="text-lg font-semibold">Karra o'sish</span>
           </Link>
 
           {/* Nav */}
-          <ul className="flex items-center gap-8">
+          <ul className="hidden items-center gap-8 lg:flex">
             <li className="">
               <a href="">Asosiy</a>
             </li>
@@ -40,10 +41,21 @@ const Header = () => {
             </li>
           </ul>
 
-          {/* Button */}
-          <a href="#develop" className="btn-primary">
-            Qabulga yozilish
-          </a>
+          <div className="flex items-center gap-5">
+            <a href="#develop" className="hidden btn-primary sm:flex">
+              Qabulga yozilish
+            </a>
+
+            <button className="flex items-center justify-center size-10 bg-neutral-100 rounded-full border transition-colors duration-200 hover:bg-neutral-200 sm:size-11 lg:hidden">
+              <img
+                width={24}
+                height={24}
+                src={hamburgerIcon}
+                alt="Hamburger menu icon"
+                className="size-[21px] sm:size-6"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </header>
