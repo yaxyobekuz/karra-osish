@@ -308,22 +308,22 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Information */}
+      <section className="py-10">
+        <div className="container">
+          {/* Title */}
+          <h2
+            className="text-center mb-12"
+            ref={animate({ y: 50, scale: 0.9 })}
+          >
+            Kurs davomida quyidagi ma'lumotlarga ega bo'lasiz
+          </h2>
+
+          <Information />
+        </div>
+      </section>
+
       <div className="hidden">
-        {/* Information */}
-        <section className="py-10">
-          <div className="container">
-            {/* Title */}
-            <h2
-              className="text-center mb-12"
-              ref={animate({ y: 50, scale: 0.9 })}
-            >
-              Kurs davomida quyidagi ma'lumotlarga ega bo'lasiz
-            </h2>
-
-            <Information />
-          </div>
-        </section>
-
         {/* Purposes */}
         <section className="bg-white py-20">
           <div className="container !max-w-6xl">
