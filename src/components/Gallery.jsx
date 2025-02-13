@@ -7,8 +7,8 @@ import useGsap from "../hooks/useGsap";
 // Swiper
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Gallery = () => {
   const animate = useGsap();
@@ -17,18 +17,19 @@ const Gallery = () => {
     <div ref={animate({ y: 50, scale: 0.9 })}>
       <Swiper
         loop={true}
-        slidesPerView={2}
-        spaceBetween={-60}
+        spaceBetween={12}
+        slidesPerView="auto"
         centeredSlides={true}
         modules={[Navigation]}
-        className="gallery-swiper h-[400px] mb-5"
+        breakpoints={{ 425: { spaceBetween: 20 } }}
         navigation={{ prevEl: ".btn-prev", nextEl: ".btn-next" }}
+        className="gallery-swiper w-full h-48 xs:h-64 sm:h-80 md:h-[400px]"
       >
         {gallery.map((url, index) => (
           <SwiperSlide
             key={index}
             style={{ background: `url(${url})` }}
-            className="h-full bg-white !bg-center !bg-cover !bg-no-repeat"
+            className="!w-5/6 !h-auto !aspect-square bg-white !bg-center !bg-cover !bg-no-repeat rounded-xl sm:rounded-2xl lg:!w-[820px]"
           />
         ))}
       </Swiper>

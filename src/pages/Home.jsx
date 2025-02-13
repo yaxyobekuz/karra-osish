@@ -413,93 +413,93 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section id="gallery" className="py-10">
+        <div className="container">
+          <div className="flex items-center justify-between mb-12">
+            {/* Title */}
+            <h2 ref={animate({ x: -50, scale: 0.9 })} className="text-center">
+              Fotogalareya
+            </h2>
+
+            {/* Navigation buttons */}
+            <div className="flex justify-end gap-5">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+                className="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11"
+              >
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+                className="btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11"
+              >
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Gallery />
+      </section>
+
+      {/* Comments */}
+      <section id="comments" className="py-10">
+        <div className="container">
+          <div className="flex items-center justify-between mb-12">
+            {/* Title */}
+            <h2 className="text-center" ref={animate({ x: -50, scale: 0.9 })}>
+              Sharxlar
+            </h2>
+
+            {/* Navigation buttons */}
+            <div className="flex justify-end gap-5">
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
+                className="comments-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11"
+              >
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+
+              <button
+                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
+                className="comments-swiper-btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11"
+              >
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Comments />
+      </section>
+
       <div className="hidden">
-        {/* Gallery */}
-        <section id="gallery" className="py-10">
-          <div className="container">
-            <div className="flex items-center justify-between mb-12">
-              {/* Title */}
-              <h2 ref={animate({ x: -50, scale: 0.9 })} className="text-center">
-                Fotogalareya
-              </h2>
-
-              {/* Navigation buttons */}
-              <div className="flex justify-end gap-5">
-                <button
-                  ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-                  className="btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70"
-                >
-                  <img
-                    width={28}
-                    height={28}
-                    src={arrowRightImg}
-                    alt="Arrow right icon"
-                    className="size-6 sm:size-7"
-                  />
-                </button>
-
-                <button
-                  ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-                  className="btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70"
-                >
-                  <img
-                    width={28}
-                    height={28}
-                    src={arrowRightImg}
-                    alt="Arrow right icon"
-                    className="size-6 sm:size-7"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <Gallery />
-        </section>
-
-        {/* Comments */}
-        <section id="comments" className="py-10">
-          <div className="container">
-            <div className="flex items-center justify-between mb-12">
-              {/* Title */}
-              <h2 className="text-center" ref={animate({ x: -50, scale: 0.9 })}>
-                Sharxlar
-              </h2>
-
-              {/* Navigation buttons */}
-              <div className="flex justify-end gap-5">
-                <button
-                  ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-                  className="comments-swiper-btn-prev flex items-center justify-center size-11 rotate-180 border-2 border-dark rounded-full opacity-70"
-                >
-                  <img
-                    width={28}
-                    height={28}
-                    src={arrowRightImg}
-                    alt="Arrow right icon"
-                    className="size-6 sm:size-7"
-                  />
-                </button>
-
-                <button
-                  ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-                  className="comments-swiper-btn-next flex items-center justify-center size-11 border-2 border-dark rounded-full opacity-70"
-                >
-                  <img
-                    width={28}
-                    height={28}
-                    src={arrowRightImg}
-                    alt="Arrow right icon"
-                    className="size-6 sm:size-7"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <Comments />
-        </section>
-
         {/* Form */}
         <section id="develop" className="py-10">
           <div className="container">

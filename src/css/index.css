@@ -56,15 +56,10 @@
 
 /* Swiper */
 .gallery-swiper .swiper-slide {
-  scale: 0.8;
-  border-radius: 12px;
-  filter: brightness(0.5);
-  transition: scale 500ms ease-in-out, filter 300ms ease-in-out,
-    border-radius 500ms ease-in-out;
+  filter: brightness(0.3);
+  transition: filter 500ms ease-in-out;
 }
 
 .gallery-swiper .swiper-slide-active {
-  scale: 1;
   filter: brightness(1);
-  border-radius: 18px;
 }

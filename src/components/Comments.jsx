@@ -19,8 +19,17 @@ const Comments = () => {
     <div ref={animate({ y: 50, scale: 0.9 })} className="container">
       <Swiper
         loop={true}
-        slidesPerView={4}
-        spaceBetween={20}
+        slidesPerView={1}
+        spaceBetween={16}
+        breakpoints={{
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          450: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            centeredSlides: false,
+          },
+        }}
         modules={[Navigation]}
         className="comments-swiper h-[400px] mb-5 rounded-2xl"
         navigation={{
