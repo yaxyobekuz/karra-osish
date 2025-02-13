@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Images
@@ -6,8 +6,21 @@ import logoIcon from "../assets/images/icons/logo.svg";
 import hamburgerIcon from "../assets/images/icons/hamburger.svg";
 
 const Header = () => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpenMenu(!isOpenMenu);
+
+    if (!isOpenMenu) {
+      window.scrollTo(0, 0);
+      document.documentElement.classList.add("no-scroll");
+    } else {
+      document.documentElement.classList.remove("no-scroll");
+    }
+  };
+
   return (
-    <header className="py-2 bg-white/50">
+    <header id="main" className="py-2 bg-white/50 relative">
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
@@ -24,19 +37,19 @@ const Header = () => {
 
           {/* Nav */}
           <ul className="hidden items-center gap-8 lg:flex">
-            <li className="">
-              <a href="">Asosiy</a>
+            <li>
+              <a href="#main">Asosiy</a>
             </li>
-            <li className="">
+            <li>
               <a href="#about">Haqida</a>
             </li>
-            <li className="">
+            <li>
               <a href="#modules">Modullar</a>
             </li>
-            <li className="">
+            <li>
               <a href="#gallery">Fotogalareya</a>
             </li>
-            <li className="">
+            <li>
               <a href="#comments">Sharxlar</a>
             </li>
           </ul>
@@ -46,7 +59,10 @@ const Header = () => {
               Qabulga yozilish
             </a>
 
-            <button className="flex items-center justify-center size-10 bg-neutral-100 rounded-full border transition-colors duration-200 hover:bg-neutral-200 sm:size-11 lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="flex items-center justify-center size-10 bg-neutral-100 rounded-full border transition-colors duration-200 hover:bg-neutral-200 sm:size-11 lg:hidden"
+            >
               <img
                 width={24}
                 height={24}
@@ -56,6 +72,43 @@ const Header = () => {
               />
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Responsive menu */}
+      <div
+        className={`${
+          isOpenMenu ? "translate-x-0 lg:translate-x-full" : "translate-x-full"
+        } fixed inset-x-0 top-[60px] z-50 bg-gray-light w-full h-screen transition-transform duration-300 sm:top-16 md:top-[72px]`}
+      >
+        <div className="p-8">
+          <ul className="flex flex-col items-center gap-8">
+            <li>
+              <a href="#main" onClick={toggleMenu}>
+                Asosiy
+              </a>
+            </li>
+            <li>
+              <a href="#about" onClick={toggleMenu}>
+                Haqida
+              </a>
+            </li>
+            <li>
+              <a href="#modules" onClick={toggleMenu}>
+                Modullar
+              </a>
+            </li>
+            <li>
+              <a href="#gallery" onClick={toggleMenu}>
+                Fotogalareya
+              </a>
+            </li>
+            <li>
+              <a href="#comments" onClick={toggleMenu}>
+                Sharxlar
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

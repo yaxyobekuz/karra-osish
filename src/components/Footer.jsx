@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Nav */}
           <ul className="hidden items-center gap-8 lg:flex">
             <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 }, 100)}>
-              <a href="#home">Asosiy</a>
+              <a href="#main">Asosiy</a>
             </li>
             <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 }, 100)}>
               <a href="#about">Haqida</a>
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Nav */}
         <ul className="flex flex-col items-center gap-8 sm:flex-row lg:hidden">
           <li ref={animate({ x: 50, scale: 0.9, delay: 0.2 }, 100)}>
-            <a href="#home">Asosiy</a>
+            <a href="#main">Asosiy</a>
           </li>
           <li ref={animate({ x: 50, scale: 0.9, delay: 0.3 }, 100)}>
             <a href="#about">Haqida</a>
