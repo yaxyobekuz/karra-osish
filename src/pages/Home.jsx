@@ -323,31 +323,31 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="hidden">
-        {/* Purposes */}
-        <section className="bg-white py-20">
-          <div className="container !max-w-6xl">
-            {/* Top */}
-            <div className="flex justify-center w-full mb-12">
-              <div className="space-y-3.5 text-center">
-                {/* Section title */}
-                <h2 ref={animate({ y: 50, scale: 0.9 })}>Maqsadlar</h2>
+      {/* Purposes */}
+      <section className="bg-white py-20">
+        <div className="container !max-w-6xl">
+          {/* Top */}
+          <div className="flex justify-center w-full mb-12">
+            <div className="space-y-3.5 text-center">
+              {/* Section title */}
+              <h2 ref={animate({ y: 50, scale: 0.9 })}>Maqsadlar</h2>
 
-                {/* Section description */}
-                <p
-                  className="text-lg"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-              </div>
+              {/* Section description */}
+              <p
+                className="text-lg"
+                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
             </div>
-
-            {/* Cards */}
-            <Purposes />
           </div>
-        </section>
 
+          {/* Cards */}
+          <Purposes />
+        </div>
+      </section>
+
+      <div className="hidden">
         {/* Owner */}
         <section className="pt-20 pb-10">
           <div className="container">
