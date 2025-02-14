@@ -3,16 +3,16 @@ import React from "react";
 // Animation
 import useGsap from "../hooks/useGsap";
 
-// Data
-import forEntrepreneurs from "../data/forEntrepreneurs";
-
 // Components
 import Gallery from "../components/Gallery";
 import Comments from "../components/Comments";
 import Purposes from "../components/Purposes";
 import ModulesList from "../components/ModuleList";
 import Information from "../components/Information";
-import FormInputWrapper from "../components/FormInputWrapper";
+import SubmitForm from "../components/SubmitForm";
+
+// Data
+import forEntrepreneurs from "../data/forEntrepreneurs";
 
 // Images
 import telIcon from "../assets/images/icons/tel.svg";
@@ -594,61 +594,7 @@ const Home = () => {
             </div>
 
             {/* Form */}
-            <form className="space-y-5 p-5 bg-gray-light rounded-2xl lg:p-8">
-              <div className="text-xl font-semibold xs:text-2xl">
-                So'rov yuborish
-              </div>
-
-              {/* First name */}
-              <div ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}>
-                <FormInputWrapper
-                  required
-                  label="Ism *"
-                  name="firstName"
-                  placeholder="Falonchi"
-                />
-              </div>
-
-              <div ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}>
-                {/* Phone number */}
-                <FormInputWrapper
-                  required
-                  type="tel"
-                  label="Telefon raqam *"
-                  placeholder="+998 (__) ___-__-__"
-                />
-              </div>
-
-              {/* Select */}
-              <div
-                className="space-y-3.5"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
-              >
-                <label htmlFor="select" className="pl-1.5">
-                  Variantlardan birni tanlang *
-                </label>
-
-                {/* Select */}
-                <select name="variants" id="select" className="h-11 px-3.5">
-                  <option value="Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.">
-                    Hech qanday ma'lumotim yo'q, to'liqroq bilishni xohlayman.
-                  </option>
-                  <option value="Dastur haqida bilaman, lekin savollarim bor.">
-                    Dastur haqida bilaman, lekin savollarim bor.
-                  </option>
-                  <option value="Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.">
-                    Dasturni o'rganib chiqdim, to'lov qilishga tayyorman.
-                  </option>
-                </select>
-              </div>
-
-              <button
-                className="btn-primary w-full"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
-              >
-                Yuborish
-              </button>
-            </form>
+            <SubmitForm />
           </div>
         </div>
       </section>

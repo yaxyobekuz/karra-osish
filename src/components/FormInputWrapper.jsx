@@ -58,6 +58,7 @@ const FormInputWrapper = ({
           name={name}
           id={inputId}
           value={value}
+          required={required}
           disabled={disabled}
           autoFocus={autoFocus}
           maxLength={maxLength}
