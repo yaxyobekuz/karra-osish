@@ -25,62 +25,13 @@ import bekzodKomilovaBg from "../assets/images/backgrounds/bekzod-komilov.jpg";
 import shirinKomilovaBg from "../assets/images/backgrounds/shirin-komilova.jpg";
 import barnoTursunovaBg from "../assets/images/backgrounds/barno-tursunova.jpg";
 import sherzodTursunovBg from "../assets/images/backgrounds/sherzod-tursunov.jpg";
+import Features from "../components/Features";
 
 const Home = () => {
   return (
     <>
-      {/* Features */}
-      <section className="bg-primary py-20 dark:bg-white/5">
-        <div className="container">
-          {/* Top */}
-          <div className="flex justify-center w-full mb-12">
-            <div className="space-y-3.5 text-center">
-              {/* Section title */}
-              <h2 className="text-white">Dastur kimlar uchun?</h2>
-
-              {/* Section description */}
-              <p className="text-lg text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          </div>
-
-          {/* Cards */}
-          <ul className="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-            {forEntrepreneurs.map(({ title, description, icon }, index) => (
-              <li
-                key={index}
-                className="flex flex-col justify-between gap-5 min-h-52 bg-[#027FCC] p-5 rounded-3xl sm:p-6 sm:min-h-64 md:p-8"
-              >
-                {/* Icon */}
-                <img
-                  width={40}
-                  alt="Icon"
-                  src={icon}
-                  height={40}
-                  className="size-8 sm:size-9 lg:size-10"
-                />
-
-                {/* Details */}
-                <div className="space-y-3.5">
-                  {/* Item title */}
-                  <h3 className="font-semibold text-white sm:text-[17px] lg:text-lg">
-                    {title}
-                  </h3>
-
-                  {/* Item description */}
-                  <p className="text-white text-sm md:text-base">
-                    {description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Owners */}
-      <section className="pt-20 pb-10">
+      <section className="bg-light py-20">
         <div className="container !max-w-6xl">
           {/* Top */}
           <div className="flex justify-center w-full mb-12">
@@ -100,7 +51,7 @@ const Home = () => {
             {/* 1 */}
             <li
               style={{ background: `url(${sherzodTursunovBg})` }}
-              className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
+              className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
             >
               <h3 className="z-10 font-medium text-white text-xl md:text-2xl lg:text-3xl">
                 <span>Sherzod</span>
@@ -115,7 +66,7 @@ const Home = () => {
             {/* 2 */}
             <li
               style={{ background: `url(${barnoTursunovaBg})` }}
-              className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
+              className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
             >
               <h3 className="z-10 text-lg font-medium text-dark sm:text-xl mg:text-2xl">
                 <span>Barno</span>
@@ -130,7 +81,7 @@ const Home = () => {
             {/* 3 */}
             <li
               style={{ background: `url(${bekzodKomilovaBg})` }}
-              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
             >
               <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
                 <span>Bekzod</span>
@@ -145,7 +96,7 @@ const Home = () => {
             {/* 4 */}
             <li
               style={{ background: `url(${shirinKomilovaBg})` }}
-              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
             >
               <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
                 <span>Shirin</span>
@@ -158,6 +109,41 @@ const Home = () => {
             </li>
           </ul>
         </div>
+      </section>
+
+      {/* Features */}
+      <section className="pt-20 pb-10">
+        <div className="container">
+          <div className="flex items-center justify-between gap-1.5 mb-12">
+            {/* Title */}
+            <h2>Dastur kimlar uchun?</h2>
+
+            {/* Navigation buttons */}
+            <div className="flex justify-end gap-5">
+              <button className="features-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11">
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+
+              <button className="features-swiper-btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11">
+                <img
+                  width={28}
+                  height={28}
+                  src={arrowRightImg}
+                  alt="Arrow right icon"
+                  className="size-5 sm:size-6"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Features />
       </section>
 
       {/* About format of course */}
@@ -264,7 +250,7 @@ const Home = () => {
       </section>
 
       {/* Information */}
-      <section className="py-10">
+      <section className="pt-10 pb-20">
         <div className="container">
           {/* Title */}
           <h2 className="text-center mb-12">
@@ -276,7 +262,7 @@ const Home = () => {
       </section>
 
       {/* Purposes */}
-      <section className="bg-white py-20 dark:bg-white/5">
+      <section className="bg-light py-20">
         <div className="container !max-w-6xl">
           {/* Top */}
           <h2 className="mb-12 text-center">Maqsadlar</h2>
@@ -312,7 +298,7 @@ const Home = () => {
               </div>
 
               {/* 2 */}
-              <div className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl dark:bg-white/5 lg:px-8">
+              <div className="max-w-lg space-y-3 text-center w-full bg-white/5 text-white py-8 px-4 rounded-2xl lg:px-8">
                 <h3 className="text-[17px] font-semibold">
                   "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
                   yaratgan
@@ -349,7 +335,7 @@ const Home = () => {
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button className="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11">
+              <button className="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -359,7 +345,7 @@ const Home = () => {
                 />
               </button>
 
-              <button className="btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11">
+              <button className="btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -384,7 +370,7 @@ const Home = () => {
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button className="comments-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11">
+              <button className="comments-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -394,7 +380,7 @@ const Home = () => {
                 />
               </button>
 
-              <button className="comments-swiper-btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11">
+              <button className="comments-swiper-btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -413,7 +399,7 @@ const Home = () => {
       {/* Form */}
       <section id="develop" className="pt-10 pb-20">
         <div className="container max-xs:!px-0">
-          <div className="grid grid-cols-1 gap-5 items-center bg-white p-5 rounded-3xl dark:border-2 dark:border-[#393939] dark:bg-white/5 md:grid-cols-2 lg:p-8">
+          <div className="grid grid-cols-1 gap-5 items-center bg-white/5 p-5 rounded-2xl border border-[#393939] xs:border-2 sm:rounded-3xl md:grid-cols-2 lg:p-8">
             <div className="space-y-6 md:space-y-14">
               <h2 className="text-center md:text-start">
                 Qabulga yozilish uchun <br /> anketani to'ldiring

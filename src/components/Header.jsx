@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header id="main" className="py-2 bg-white/50 relative dark:bg-white/5">
+    <header id="main" className="py-2 relative bg-white/5">
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}

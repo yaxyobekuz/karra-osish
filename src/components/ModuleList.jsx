@@ -10,7 +10,7 @@ const ModulesList = () => {
       {modules.map((module) => (
         <li
           key={module.id}
-          className="bg-white space-y-4 p-4 rounded-3xl dark:even:bg-white/70 dark:even:text-dark dark:bg-white/5 dark:border-2 dark:border-[#393939] dark:even:border-white sm:p-6 md:space-y-6 md:p-8"
+          className="bg-white/5 space-y-4 p-4 rounded-2xl even:bg-white/70 even:text-dark border border-[#393939] sm:rounded-3xl even:border-white/70 xs:border-2 sm:p-6 md:space-y-6 md:p-8"
         >
           {/* Top */}
           <div className="flex items-start gap-3 md:gap-5">

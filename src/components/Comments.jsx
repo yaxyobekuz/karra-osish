@@ -41,12 +41,12 @@ const Comments = () => {
           return (
             <SwiperSlide
               key={index}
-              className="relative h-full bg-white rounded-2xl"
+              className="relative h-full bg-white/5 rounded-2xl"
             >
               {activeComment !== index ? (
                 <button
                   onClick={() => setActiveComment(index)}
-                  className="flex items-center justify-center absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 size-11 bg-primary rounded-full"
+                  className="flex items-center justify-center absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 size-12 bg-primary rounded-full"
                 >
                   <img
                     width={20}

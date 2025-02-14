@@ -1,13 +1,10 @@
 import React from "react";
-import useGsap from "../hooks/useGsap";
+import { Link } from "react-router-dom";
 
 // Images
 import successIcon from "../assets/images/others/success.png";
-import { Link } from "react-router-dom";
 
 const Success = () => {
-  const animate = useGsap();
-
   return (
     <div className="flex items-center min-h-screen pt-20 pb-40">
       <div className="container space-y-5">

@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Images
 import logoIcon from "../assets/images/icons/logo.svg";
 import facebookIcon from "../assets/images/icons/facebook.svg";
@@ -11,10 +8,8 @@ import telegramIcon from "../assets/images/icons/telegram.svg";
 import instagramIcon from "../assets/images/icons/instagram.svg";
 
 const Footer = () => {
-  const animate = useGsap();
-
   return (
-    <footer className="py-10 bg-dark text-white dark:bg-white/5 dark:border-t-2 dark:border-[#393939]">
+    <footer className="py-10 bg-white/5 border-t border-[#393939] xs:border-t-2">
       <div className="container space-y-8 sm:space-y-5">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
