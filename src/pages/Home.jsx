@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <>
       {/* Features */}
-      <section className="bg-primary py-20">
+      <section className="bg-primary py-20 dark:bg-white/5">
         <div className="container">
           {/* Top */}
           <div className="flex justify-center w-full mb-12">
@@ -122,7 +122,7 @@ const Home = () => {
             <li
               ref={animate({ x: -50, scale: 0.9, delay: 0.1 })}
               style={{ background: `url(${sherzodTursunovBg})` }}
-              className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
+              className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
             >
               <h3 className="z-10 font-medium text-white text-xl md:text-2xl lg:text-3xl">
                 <span>Sherzod</span>
@@ -138,9 +138,9 @@ const Home = () => {
             <li
               style={{ background: `url(${barnoTursunovaBg})` }}
               ref={animate({ y: -50, x: 50, scale: 0.9, delay: 0.2 })}
-              className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
+              className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
             >
-              <h3 className="z-10 text-lg font-medium sm:text-xl mg:text-2xl">
+              <h3 className="z-10 text-lg font-medium text-dark sm:text-xl mg:text-2xl">
                 <span>Barno</span>
                 <br />
                 <span>Tursunova</span>
@@ -154,7 +154,7 @@ const Home = () => {
             <li
               ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
               style={{ background: `url(${bekzodKomilovaBg})` }}
-              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
             >
               <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
                 <span>Bekzod</span>
@@ -170,7 +170,7 @@ const Home = () => {
             <li
               ref={animate({ y: 50, x: 50, scale: 0.9, delay: 0.5 })}
               style={{ background: `url(${shirinKomilovaBg})` }}
-              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl xs:h-56 xs:p-5 sm:p-6"
+              className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
             >
               <h3 className="z-10 text-lg font-medium text-white sm:text-xl">
                 <span>Shirin</span>
@@ -324,7 +324,7 @@ const Home = () => {
       </section>
 
       {/* Purposes */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-20 dark:bg-white/5">
         <div className="container !max-w-6xl">
           {/* Top */}
           <h2
@@ -371,7 +371,7 @@ const Home = () => {
               {/* 2 */}
               <div
                 ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl lg:px-8"
+                className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl dark:bg-white/5 lg:px-8"
               >
                 <h3 className="text-[17px] font-semibold">
                   "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
@@ -492,9 +492,9 @@ const Home = () => {
       </section>
 
       {/* Form */}
-      <section id="develop" className="py-10">
+      <section id="develop" className="pt-10 pb-20">
         <div className="container max-xs:!px-0">
-          <div className="grid grid-cols-1 gap-5 items-center bg-white p-5 rounded-3xl md:grid-cols-2 lg:p-8">
+          <div className="grid grid-cols-1 gap-5 items-center bg-white p-5 rounded-3xl dark:border-2 dark:border-[#393939] dark:bg-white/5 md:grid-cols-2 lg:p-8">
             <div className="space-y-6 md:space-y-14">
               <h2
                 className="text-center md:text-start"

@@ -14,7 +14,7 @@ const Footer = () => {
   const animate = useGsap();
 
   return (
-    <footer className="py-10 bg-dark text-white">
+    <footer className="py-10 bg-dark text-white dark:bg-white/5 dark:border-t-2 dark:border-[#393939]">
       <div className="container space-y-8 sm:space-y-5">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}

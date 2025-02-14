@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header id="main" className="py-2 bg-white/50 relative">
+    <header id="main" className="py-2 bg-white/50 relative dark:bg-white/5">
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           {/* Logo */}
@@ -79,7 +79,7 @@ const Header = () => {
       <div
         className={`${
           isOpenMenu ? "translate-x-0 lg:translate-x-full" : "translate-x-full"
-        } fixed inset-x-0 top-[60px] z-50 bg-gray-light w-full h-screen transition-transform duration-300 sm:top-16 md:top-[72px]`}
+        } fixed inset-x-0 top-[60px] z-50 bg-gray-light w-full h-screen transition-transform duration-300 dark:bg-[#212121] sm:top-16 md:top-[72px]`}
       >
         <div className="p-8">
           <ul className="flex flex-col items-center gap-8">

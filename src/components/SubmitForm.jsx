@@ -61,7 +61,7 @@ const SubmitForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-5 p-5 bg-gray-light rounded-2xl lg:p-8"
+      className="space-y-5 p-5 bg-gray-light rounded-2xl dark dark:bg-white/5 lg:p-8"
     >
       <div className="text-xl font-semibold xs:text-2xl">So'rov yuborish</div>
 

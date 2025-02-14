@@ -15,7 +15,7 @@ const ModulesList = () => {
       {modules.map((module, index) => (
         <li
           key={module.id}
-          className="bg-white space-y-4 p-4 rounded-3xl sm:p-6 md:space-y-6 md:p-8"
+          className="bg-white space-y-4 p-4 rounded-3xl dark:even:bg-white/70 dark:even:text-dark dark:bg-white/5 dark:border-2 dark:border-[#393939] dark:even:border-white sm:p-6 md:space-y-6 md:p-8"
           ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
         >
           {/* Top */}
