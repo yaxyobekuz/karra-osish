@@ -31,9 +31,9 @@ const useGsap = () => {
   }, []);
 
   const addAnimation = (options, start) => (el) => {
-    // if (el && !elementsRef.current.some((e) => e.el === el)) {
-    //   elementsRef.current.push({ el, options, start });
-    // }
+    if (el && !elementsRef.current.some((e) => e.el === el)) {
+      elementsRef.current.push({ el, options, start });
+    }
   };
 
   return (options, start = 85) => addAnimation(options, start);
