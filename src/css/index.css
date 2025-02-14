@@ -12,7 +12,7 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-gray-light text-base text-dark font-normal font-Manrope dark:bg-[#111] dark:text-white;
+    @apply overflow-x-hidden bg-[#111] text-base text-white font-normal font-Manrope;
   }
 
   h2 {
@@ -22,11 +22,11 @@
   input,
   textarea,
   select {
-    @apply w-full bg-white outline-none rounded-lg dark:bg-white/10;
+    @apply w-full bg-white/10 outline-none rounded-lg;
   }
 
   option{
-    @apply dark:bg-dark
+    @apply bg-dark
   }
 
   textarea {
@@ -42,7 +42,7 @@
   }
 
   .btn-secondary {
-    @apply flex items-center justify-center bg-white px-5 py-2.5 rounded-full border dark:bg-white/5;
+    @apply flex items-center justify-center bg-white/5 px-5 py-2.5 rounded-full border border-[#393939];
   }
 
   .no-scrollbar::-webkit-scrollbar {
