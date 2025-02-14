@@ -1,9 +1,6 @@
 // Data
 import gallery from "../data/gallery";
 
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Swiper
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,10 +8,8 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Gallery = () => {
-  const animate = useGsap();
-
   return (
-    <div ref={animate({ y: 50, scale: 0.9 })}>
+    <div>
       <Swiper
         loop={true}
         spaceBetween={12}

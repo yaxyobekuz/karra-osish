@@ -1,8 +1,3 @@
-import React from "react";
-
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Components
 import Gallery from "../components/Gallery";
 import Comments from "../components/Comments";
@@ -32,8 +27,6 @@ import barnoTursunovaBg from "../assets/images/backgrounds/barno-tursunova.jpg";
 import sherzodTursunovBg from "../assets/images/backgrounds/sherzod-tursunov.jpg";
 
 const Home = () => {
-  const animate = useGsap();
-
   return (
     <>
       {/* Features */}
@@ -43,18 +36,10 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2
-                className="text-white"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
-              >
-                Dastur kimlar uchun?
-              </h2>
+              <h2 className="text-white">Dastur kimlar uchun?</h2>
 
               {/* Section description */}
-              <p
-                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                className="text-lg text-white"
-              >
+              <p className="text-lg text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -65,7 +50,6 @@ const Home = () => {
             {forEntrepreneurs.map(({ title, description, icon }, index) => (
               <li
                 key={index}
-                ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
                 className="flex flex-col justify-between gap-5 min-h-52 bg-[#027FCC] p-5 rounded-3xl sm:p-6 sm:min-h-64 md:p-8"
               >
                 {/* Icon */}
@@ -102,15 +86,10 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
-                Asoschilar
-              </h2>
+              <h2>Asoschilar</h2>
 
               {/* Section description */}
-              <p
-                className="max-w-xl text-lg"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-              >
+              <p className="max-w-xl text-lg">
                 Karra o'sish asosiy asoschilari
               </p>
             </div>
@@ -120,7 +99,6 @@ const Home = () => {
           <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4">
             {/* 1 */}
             <li
-              ref={animate({ x: -50, scale: 0.9, delay: 0.1 })}
               style={{ background: `url(${sherzodTursunovBg})` }}
               className="flex items-end relative overflow-hidden h-72 !bg-cover !bg-no-repeat rounded-3xl p-4 col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-auto xs:col-span-1 xs:p-5 sm:p-6 md:col-span-2 md:row-span-2 lg:p-8"
             >
@@ -137,7 +115,6 @@ const Home = () => {
             {/* 2 */}
             <li
               style={{ background: `url(${barnoTursunovaBg})` }}
-              ref={animate({ y: -50, x: 50, scale: 0.9, delay: 0.2 })}
               className="flex items-end h-40 relative overflow-hidden !bg-right !bg-cover !bg-no-repeat p-4 rounded-3xl col-span-2 dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:!bg-[-200px] xs:h-56 xs:col-span-1 xs:p-5 sm:!bg-right sm:p-6 md:col-span-2"
             >
               <h3 className="z-10 text-lg font-medium text-dark sm:text-xl mg:text-2xl">
@@ -152,7 +129,6 @@ const Home = () => {
 
             {/* 3 */}
             <li
-              ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
               style={{ background: `url(${bekzodKomilovaBg})` }}
               className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
             >
@@ -168,7 +144,6 @@ const Home = () => {
 
             {/* 4 */}
             <li
-              ref={animate({ y: 50, x: 50, scale: 0.9, delay: 0.5 })}
               style={{ background: `url(${shirinKomilovaBg})` }}
               className="flex items-end h-40 relative overflow-hidden !bg-cover !bg-no-repeat p-4 rounded-3xl dark:border-2 transition-colors duration-300 dark:border-[#494949] dark:hover:border-primary xs:h-56 xs:p-5 sm:p-6"
             >
@@ -192,15 +167,10 @@ const Home = () => {
           <div className="flex justify-center w-full mb-12">
             <div className="space-y-3.5 text-center">
               {/* Section title */}
-              <h2 ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}>
-                Kurs formati haqida
-              </h2>
+              <h2>Kurs formati haqida</h2>
 
               {/* Section description */}
-              <p
-                className="max-w-xl text-lg"
-                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-              >
+              <p className="max-w-xl text-lg">
                 Toshkent filialimizda 1 hafta davomida 1 marotaba jonli
                 uchrashuv tashkil qilinadi. Uchrashuv davomida quyidagi
                 muammolarga yechim topamiz.
@@ -211,10 +181,7 @@ const Home = () => {
           {/* Main contents */}
           <ul className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
             {/* 1 */}
-            <li
-              ref={animate({ x: 50, scale: 0.9, delay: 0.1 })}
-              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
-            >
+            <li className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52">
               <img
                 width={208}
                 height={208}
@@ -230,10 +197,7 @@ const Home = () => {
             </li>
 
             {/* 2 */}
-            <li
-              ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
-            >
+            <li className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52">
               <img
                 width={208}
                 height={208}
@@ -249,10 +213,7 @@ const Home = () => {
             </li>
 
             {/* 3 */}
-            <li
-              ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
-            >
+            <li className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52">
               <img
                 width={208}
                 height={208}
@@ -268,10 +229,7 @@ const Home = () => {
             </li>
 
             {/* 4 */}
-            <li
-              ref={animate({ x: 50, scale: 0.9, delay: 0.4 })}
-              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
-            >
+            <li className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52">
               <img
                 width={208}
                 height={208}
@@ -287,10 +245,7 @@ const Home = () => {
             </li>
 
             {/* 5 */}
-            <li
-              ref={animate({ x: 50, scale: 0.9, delay: 0.5 })}
-              className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52"
-            >
+            <li className="flex flex-col items-center justify-center gap-3.5 w-32 sm:w-40 md:w-52">
               <img
                 width={208}
                 height={208}
@@ -312,10 +267,7 @@ const Home = () => {
       <section className="py-10">
         <div className="container">
           {/* Title */}
-          <h2
-            className="text-center mb-12"
-            ref={animate({ y: 50, scale: 0.9 })}
-          >
+          <h2 className="text-center mb-12">
             Kurs davomida quyidagi ma'lumotlarga ega bo'lasiz
           </h2>
 
@@ -327,12 +279,7 @@ const Home = () => {
       <section className="bg-white py-20 dark:bg-white/5">
         <div className="container !max-w-6xl">
           {/* Top */}
-          <h2
-            className="mb-12 text-center"
-            ref={animate({ y: 50, scale: 0.9 })}
-          >
-            Maqsadlar
-          </h2>
+          <h2 className="mb-12 text-center">Maqsadlar</h2>
 
           {/* Cards */}
           <Purposes />
@@ -347,16 +294,12 @@ const Home = () => {
               alt="Sherzod tursunov"
               src={sherzodTursunovImg}
               className="mx-auto max-w-md w-full md:max-w-max md:mx-0 md:p-5 lg:p-12"
-              ref={animate({ y: 50, scale: 0.9, delay: 0.1 })}
             />
 
             {/* Content */}
             <div className="flex flex-col items-center justify-center gap-5">
               {/* 1 */}
-              <div
-                ref={animate({ y: -50, scale: 0.9 })}
-                className="max-w-lg space-y-3 text-center w-full bg-primary text-white py-8 px-4 rounded-2xl lg:px-8"
-              >
+              <div className="max-w-lg space-y-3 text-center w-full bg-primary text-white py-8 px-4 rounded-2xl lg:px-8">
                 <h3 className="text-[17px] font-semibold">
                   "Eurodesign" asoschisi
                 </h3>
@@ -369,10 +312,7 @@ const Home = () => {
               </div>
 
               {/* 2 */}
-              <div
-                ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl dark:bg-white/5 lg:px-8"
-              >
+              <div className="max-w-lg space-y-3 text-center w-full bg-dark text-white py-8 px-4 rounded-2xl dark:bg-white/5 lg:px-8">
                 <h3 className="text-[17px] font-semibold">
                   "Wilgood" - aqlli avtoservislar tarmog'ini noldan boshlab
                   yaratgan
@@ -394,12 +334,7 @@ const Home = () => {
       <section id="modules" className="py-10">
         <div className="container">
           {/* Title */}
-          <h2
-            ref={animate({ y: 50, scale: 0.9 })}
-            className="text-primary text-center mb-12"
-          >
-            Asosiy modullar
-          </h2>
+          <h2 className="text-primary text-center mb-12">Asosiy modullar</h2>
 
           <ModulesList />
         </div>
@@ -410,16 +345,11 @@ const Home = () => {
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2 ref={animate({ x: -50, scale: 0.9 })} className="text-center">
-              Fotogalareya
-            </h2>
+            <h2 className="text-center">Fotogalareya</h2>
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button
-                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-                className="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11"
-              >
+              <button className="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -429,10 +359,7 @@ const Home = () => {
                 />
               </button>
 
-              <button
-                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-                className="btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11"
-              >
+              <button className="btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -453,16 +380,11 @@ const Home = () => {
         <div className="container">
           <div className="flex items-center justify-between mb-12">
             {/* Title */}
-            <h2 className="text-center" ref={animate({ x: -50, scale: 0.9 })}>
-              Sharxlar
-            </h2>
+            <h2 className="text-center">Sharxlar</h2>
 
             {/* Navigation buttons */}
             <div className="flex justify-end gap-5">
-              <button
-                ref={animate({ x: 50, scale: 0.9, delay: 0.3 })}
-                className="comments-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11"
-              >
+              <button className="comments-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-dark rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -472,10 +394,7 @@ const Home = () => {
                 />
               </button>
 
-              <button
-                ref={animate({ x: 50, scale: 0.9, delay: 0.2 })}
-                className="comments-swiper-btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11"
-              >
+              <button className="comments-swiper-btn-next flex items-center justify-center size-10 border-2 border-dark rounded-full opacity-70 sm:size-11">
                 <img
                   width={28}
                   height={28}
@@ -496,19 +415,13 @@ const Home = () => {
         <div className="container max-xs:!px-0">
           <div className="grid grid-cols-1 gap-5 items-center bg-white p-5 rounded-3xl dark:border-2 dark:border-[#393939] dark:bg-white/5 md:grid-cols-2 lg:p-8">
             <div className="space-y-6 md:space-y-14">
-              <h2
-                className="text-center md:text-start"
-                ref={animate({ x: 50, y: -50, scale: 1.3 })}
-              >
+              <h2 className="text-center md:text-start">
                 Qabulga yozilish uchun <br /> anketani to'ldiring
               </h2>
 
               <div className="grid grid-cols-1 gap-3 xs:grid-cols-2 sm:gap-5">
                 {/* 1 */}
-                <div
-                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}
-                >
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                   <img
                     width={32}
                     height={32}
@@ -526,10 +439,7 @@ const Home = () => {
                 </div>
 
                 {/* 2 */}
-                <div
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}
-                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
-                >
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                   <img
                     width={32}
                     height={32}
@@ -550,10 +460,7 @@ const Home = () => {
                 </div>
 
                 {/* 3 */}
-                <div
-                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
-                >
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                   <img
                     width={32}
                     height={32}
@@ -571,10 +478,7 @@ const Home = () => {
                 </div>
 
                 {/* 4 */}
-                <div
-                  ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
-                  className="flex items-center gap-3 sm:gap-4 md:gap-5"
-                >
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-5">
                   <img
                     width={32}
                     height={32}

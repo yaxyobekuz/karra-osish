@@ -1,6 +1,3 @@
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Data
 import purposes from "../data/purposes";
 
@@ -8,8 +5,6 @@ import purposes from "../data/purposes";
 import polygonIcon from "../assets/images/icons/polygon.svg";
 
 const Purposes = () => {
-  const animate = useGsap();
-
   return (
     <ol className="grid grid-cols-1 gap-4 xs:grid-cols-2 sm:gap-5 md:grid-cols-3">
       {purposes.map(({ title, bg, color }, index) => (
@@ -19,7 +14,6 @@ const Purposes = () => {
             background: `${bg}${bg.startsWith("url") ? ", #292a31" : ""}`,
             color,
           }}
-          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
           className="flex flex-col justify-between gap-5 relative overflow-hidden min-h-52 !bg-cover !bg-no-repeat p-6 rounded-3xl sm:p-8"
         >
           {/* Index */}

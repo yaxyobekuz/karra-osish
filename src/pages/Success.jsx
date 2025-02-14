@@ -17,30 +17,17 @@ const Success = () => {
           src={successIcon}
           alt="Success icon"
           className="size-20"
-          ref={animate({ y: 100, scale: 0.1 })}
         />
 
-        <h1
-          ref={animate({ y: 100, delay: 0.2 })}
-          className="text-2xl font-semibold xs:text-3xl"
-        >
-          Muvaffaqiyatli!
-        </h1>
+        <h1 className="text-2xl font-semibold xs:text-3xl">Muvaffaqiyatli!</h1>
 
-        <p
-          ref={animate({ y: 100, delay: 0.3 })}
-          className="font-medium opacity-70 xs:text-lg"
-        >
+        <p className="font-medium opacity-70 xs:text-lg">
           So'rovingiz muvaffaqiyatli qabul qilindi. <br /> Operatorlarimiz tez
           orada siz bilan bog'lanishadi.
         </p>
 
         <div className="flex items-center gap-5">
-          <Link
-            to="/"
-            className="btn-primary w-full px-0 xs:w-40"
-            ref={animate({ y: 100, delay: 0.4 }, 100)}
-          >
+          <Link to="/" className="btn-primary w-full px-0 xs:w-40">
             Bosh sahifa
           </Link>
 
@@ -48,7 +35,6 @@ const Success = () => {
             target="_blank"
             href="https://t.me/karrausish"
             className="btn-secondary w-full px-0 xs:w-40"
-            ref={animate({ y: 100, delay: 0.5 }, 100)}
           >
             Telegram kanal
           </a>

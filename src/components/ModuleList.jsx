@@ -1,6 +1,3 @@
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Data
 import modules from "../data/modules";
 
@@ -8,15 +5,12 @@ import modules from "../data/modules";
 import successIcon from "../assets/images/icons/success.svg";
 
 const ModulesList = () => {
-  const animate = useGsap();
-
   return (
     <ol className="space-y-5">
-      {modules.map((module, index) => (
+      {modules.map((module) => (
         <li
           key={module.id}
           className="bg-white space-y-4 p-4 rounded-3xl dark:even:bg-white/70 dark:even:text-dark dark:bg-white/5 dark:border-2 dark:border-[#393939] dark:even:border-white sm:p-6 md:space-y-6 md:p-8"
-          ref={animate({ y: 50, scale: 0.9, delay: 0.1 * (index + 1) })}
         >
           {/* Top */}
           <div className="flex items-start gap-3 md:gap-5">

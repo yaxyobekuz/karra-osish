@@ -1,22 +1,15 @@
 // Swiper
 import "swiper/css";
 import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-
-// Animation
-import useGsap from "../hooks/useGsap";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Data
 import comments from "../data/comments";
 
-// Images
-
 const Comments = () => {
-  const animate = useGsap();
-
   return (
-    <div ref={animate({ y: 50, scale: 0.9 })} className="container">
+    <div className="container">
       <Swiper
         loop={true}
         slidesPerView={1}

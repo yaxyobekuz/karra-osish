@@ -4,9 +4,6 @@ import { useNavigate } from "react-router-dom";
 // Axios
 import axios from "axios";
 
-// Animation
-import useGsap from "../hooks/useGsap";
-
 // Utils
 import { extractNumbers, formatDate } from "../utils";
 
@@ -14,7 +11,6 @@ import { extractNumbers, formatDate } from "../utils";
 import FormInputWrapper from "../components/FormInputWrapper";
 
 const SubmitForm = () => {
-  const animate = useGsap();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -66,7 +62,7 @@ const SubmitForm = () => {
       <div className="text-xl font-semibold xs:text-2xl">So'rov yuborish</div>
 
       {/* First name */}
-      <div ref={animate({ y: 50, scale: 0.9, delay: 0.2 })}>
+      <div>
         <FormInputWrapper
           required
           label="Ism *"
@@ -77,7 +73,7 @@ const SubmitForm = () => {
         />
       </div>
 
-      <div ref={animate({ y: 50, scale: 0.9, delay: 0.3 })}>
+      <div>
         {/* Phone number */}
         <FormInputWrapper
           required
@@ -90,10 +86,7 @@ const SubmitForm = () => {
       </div>
 
       {/* Select */}
-      <div
-        className="space-y-3.5"
-        ref={animate({ y: 50, scale: 0.9, delay: 0.4 })}
-      >
+      <div className="space-y-3.5">
         <label htmlFor="variants" className="pl-1.5">
           Variantlardan birni tanlang *
         </label>
@@ -120,7 +113,6 @@ const SubmitForm = () => {
 
       <button
         disabled={isLoading}
-        ref={animate({ y: 50, scale: 0.9, delay: 0.5 })}
         className={`${isLoading ? "animate-pulse" : ""} btn-primary w-full`}
       >
         Yuborish
