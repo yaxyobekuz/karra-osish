@@ -33,7 +33,7 @@ export default [
   },
   {
     title: "Mijozlar oqimini bir necha barobar oshirish.",
-    bg: "#292a31",
+    bg: "#111",
     color: "white",
   },
 ];
